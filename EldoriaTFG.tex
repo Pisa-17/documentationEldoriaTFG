@@ -21,6 +21,8 @@
 \usepackage{appendix}
 \usepackage{tocloft} % Paquete para personalizar el índice de figuras
 %\usepackage{minted} % Paquete para resaltado de sintaxis
+\usepackage{enumitem}
+\usepackage{hyperref}
 
 % Sets de dimensiones
 \setlength{\parindent}{0pt}
@@ -150,38 +152,39 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
               \item Este entorno de desarrollo cuenta con una tecnología de sugerencias de código real, bastante avanzada la cual nos provee de código por lo general bastante acertado según lo que estamos desarrollando, ya que mientras programamos, el IDE, analiza lo que estamos escribiendo y lo que hemos programado para darnos mejores sugerencias de autocompletado.
               \item \textbf{El precio de este IDE, actualmente(Mayo/2024) es de: 160 euros al mes}
           \end{itemize}
-          \begin{figure}[h]
+          \begin{figure}[!ht]
             \centering
-            \includegraphics[width=0.1\textwidth]{Images/IntelliJ_IDEA_Icon.svg.png} % Asegúrate de que el archivo intellij.png esté en la misma carpeta que tu archivo .tex
+            \includegraphics[width=0.1\textwidth]{Images/IntelliJ_IDEA_Icon.svg.png} 
             \caption{Logo de IntelliJ IDEA}
             \label{fig:intellij}
         \end{figure}
         
-    \item \textbf{Docker}
+    \item \textbf{XAMPP}
           \begin{itemize}
-              \item \textbf{Docker} se trata de un proyecto de código abierto, que nos permite automatizar y facilitar el despliegue de aplicaciones dentro de \textit{contenedores de software}, proporcionando una capa adicional de abstracción y automatización de virtualización de aplicaciones en múltiples sistemas operativos.
-              \item \textbf{Docker} además está construido sobre las facilidades proporcionadas por el kernel Linux (principalmente cgroups y namespaces), un contenedor Docker, a diferencia de una máquina virtual, no requiere incluir un sistema operativo independiente, por lo que nos permite tener procesos aislados del sistema \textit{"host"} y tener contendores ligeros.
+              \item \textbf{XAMPP} es un paquete de software gratuito y de código abierto desarrollado por Apache Friends, que proporciona una solución fácil de instalar para configurar un servidor web local. XAMPP incluye Apache, MySQL (o MariaDB), PHP y Perl, entre otros componentes.
+              \item El nombre \textit{XAMPP} es un acrónimo que viene de: 
+              \begin{itemize}
+                \item X: Plataforma cruzada (Cross-platform)
+                \item A: Apache (servidor web)
+                \item M: MySQL o MariaDB (sistema de gestión de bases de datos)
+                \item P: PHP (lenguaje de scripting del lado del servidor)
+                \item P: Perl (lenguaje de programación)
+              \end{itemize}
           \end{itemize}
-          \begin{figure}[h]
-            \centering
-            \includegraphics[width=0.2\textwidth]{Images/docker.png} % Asegúrate de que el archivo intellij.png esté en la misma carpeta que tu archivo .tex
-            \caption{Logo de Docker}
-            \label{fig:docker}
-        \end{figure}
-        
-    \item \textbf{Jooq}
+    \item \textbf{JDBC}
           \begin{itemize}
-              \item \textbf{Jooq} tambien conocido como Java Object Oriented Querying, es una biblioteca ligera de mapeo de bases de datos que implementa el patrón de registro activo, su proposito es ser tanto relacional como orientada a objetos.
-              \item Hemos usado esta biblioteca debido a su similitud con \textit{Linq} el cual es un componente de .NET, que nos permite hacer consultas de una manera muy cómoda.
+              \item \textbf{JDBC} tambien conocido como \textit{Java Database Connectivity}, es la especificación JavaSoft de una interfaz de programación de aplicaciones (API) estándar que permite que los programas Java accedan a sistemas de gestión de bases de datos. La API JDBC consiste en un conjunto de interfaces y clases escribas en el lenguaje de programación Java
+              \item Hemos usado esta biblioteca debido a su facilidad de uso, que nos permite hacer consultas de una manera muy cómoda.
+              \item Además proporciona un marco estándar para la conexión, consulta y manipulación de datos, asegurando la portabilidad y flexibilidad de las aplicaciones Java.
           \end{itemize}
     \item \textbf{Visual studio Code}
           \begin{itemize}
               \item \textbf{Visual studio Code} es un IDE, que nos provee de una cantidad de configuraciones infinita, y también al tener esta versatilidad es perfecto como IDE, para trabajar en un proyecto que involucre usar varios lenguajes a la vez, aunque en nuestro caso, lo hemos usado para desarrollar el documento \LaTeX, de la memoria del proyecto.
               \item Para desarrollar el documento, hemos tenido que descargarnos \textit{Perl}, \textit{LaTeX Workshop} y por ultimo \textit{MikTex}, esto es necesario si queremos que Visual Studio nos deje desarrollar cualquier docuemnto \LaTeX, además de un plugin para poder visualizar el documento pdf compilado desde Visual Studio.
           \end{itemize}
-          \begin{figure}[h]
+          \begin{figure}[!ht]
             \centering
-            \includegraphics[width=0.2\textwidth]{Images/t_visual-studio-code4470.jpg} % Asegúrate de que el archivo intellij.png esté en la misma carpeta que tu archivo .tex
+            \includegraphics[width=0.2\textwidth]{Images/t_visual-studio-code4470.jpg} 
             \caption{Logo de Visual studio code}
             \label{fig:visualstudio}
         \end{figure}
@@ -191,9 +194,9 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
               \item \textbf{\LaTeX} está formado por un gran conjunto de macros de \textbf{TeX}, escrito por Leslie Lamport en 1984 con la intención de facilitar el uso del lenguaje de composición tipográfica \LaTeX, creado por Donald Knuth. Se utiliza mucho para la composición de artículos académicos, tesis y libros técnicos, dado que la calidad tipográfica de los documentos realizados en LaTeX se considera adecuada a las necesidades de una editorial científica de primera línea, muchas de las cuales ya lo emplean.
               \item Para poder desarrollar el documento de la memoria en \LaTeX, hemos hecho uso de la documentación que existe en internet, asi como documentos ya hechos, por ejemplo repositorios de gente que ya ha realizado un documento \LaTeX, aunque la plantilla usada en este documento esta realizada desde cero.
           \end{itemize}
-          \begin{figure}[h]
+          \begin{figure}[!ht]
             \centering
-            \includegraphics[width=0.2\textwidth]{Images/LaTeX_project_logo_bird.svg.png} % Asegúrate de que el archivo intellij.png esté en la misma carpeta que tu archivo .tex
+            \includegraphics[width=0.2\textwidth]{Images/LaTeX_project_logo_bird.svg.png} 
             \caption{Logo de LaTex Project}
             \label{fig:latexlogo}
         \end{figure}
@@ -202,9 +205,9 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
               \item \textbf{MySql} es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por \textit{Oracle Corporation} y está considerada como la base de datos de código abierto más popular del mundo, y una de las más populares en general junto a \textit{Oracle} y \textit{Microsoft SQL Server}, todo para entornos de desarrollo web.
               \item \textbf{MySql} fue inicialmente desarrollado por \textit{MySQL AB} (empresa fundada por David Axmark, Allan Larsson y Michael Widenius). \textit{MySQL AB} fue adquirida por \textit{Sun Microsystems} en 2008, y ésta a su vez fue comprada por \textit{Oracle Corporation} en 2010, la cual ya era dueña desde 2005 de Innobase Oy, empresa finlandesa desarrolladora del motor \textit{InnoDB} para \textit{MySQL}. Fácil de usar y simple de implementar. Razones por las cuales, es tambien una de las más usadas.
           \end{itemize}
-          \begin{figure}[h]
+          \begin{figure}[!ht]
             \centering
-            \includegraphics[width=0.25\textwidth]{Images/MySQL-Logo.png} % Asegúrate de que el archivo intellij.png esté en la misma carpeta que tu archivo .tex
+            \includegraphics[width=0.25\textwidth]{Images/MySQL-Logo.png} 
             \caption{Logo de MySQL}
             \label{fig:MYSQLLOGO}
         \end{figure}
@@ -220,9 +223,9 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
           \begin{itemize}
               \item \textbf{Excalidraw} es una web que nos ofrece una pizarra virtual en la que poder dibujar, hacer notas o generar diagramas incluso, como los diagramas UML de software, además cuenta con bastantes opciones a la hora de exportar lo dibujado, y es una herramienta muy útil para hacer esquemas.
           \end{itemize}
-          \begin{figure}[h]
+          \begin{figure}[!ht]
             \centering
-            \includegraphics[width=0.2\textwidth]{Images/logoExcalidraw.png} % Asegúrate de que el archivo intellij.png esté en la misma carpeta que tu archivo .tex
+            \includegraphics[width=0.2\textwidth]{Images/logoExcalidraw.png} 
             \caption{Logo de Excalidraw}
             \label{fig:excalidraw}
         \end{figure}
@@ -340,7 +343,7 @@ La penultima fase del proyecto, en esta se encontraria la recta final de desarro
         \hline
         Diseño de Juego                                            & 20/08/2023               & 07/02/2024            & 20                          \\
         \hline
-        Desarrollo del juego                                       & 08/01/2024               & 03/06/2024            & 180                         \\
+        Desarrollo del juego                                       & 08/01/2024               & 03/06/2024            & 220                         \\
         \hline
         Pruebas y Depuración                                       & 03/06/2024               & 10/06/2024            & 30                          \\
         \hline
@@ -350,7 +353,7 @@ La penultima fase del proyecto, en esta se encontraria la recta final de desarro
         \hline
         Documentación                                              & 10/09/2023               & 10/06/2024            & 70                          \\
         \hline
-        \multicolumn{3}{|r|}{\textbf{Total de Horas Planificadas}} & \textbf{340}                                                                   \\
+        \multicolumn{3}{|r|}{\textbf{Total de Horas Planificadas}} & \textbf{380}                                                                   \\
         \hline
     \end{tabular}
     \caption{Tabla de horas}
@@ -544,9 +547,9 @@ Esta parte del codigo, ejecuta un bucle (El bucle se ejecuta mientras gameThread
 \end{itemize}
 Es decir, este metodo controla la lógica del dibujado o render del juego para que sea siempre de 60 fotogramas por segundo, es decir, dibuja 60 veces por segundo lo que tenemos en pantalla
 de esta manera no tenemos valores extremadamente altos que no sirve de nada tener en un juego de este estilo, ya que no necesitamos que se dibuje todo 300 mil veces por segundo.\\
-Acabando con las clases principales, tenemos la clase \textit{Player} la cual tiene todos los métodos relacionados al jugador, es decir, el método de atacar, el método de moverse, colisiones con objetos,
-etc \dots
+
 \clearpage
+% ---------------------------------------
 \subsubsection{Método loadmap}
 Aun asi, vale la pena destacar varios métodos interesantes como el de \textit{"loadmap"}, que encontramos en la clase \textit{"TileMananger"}, la clase encargada de leer el mapa del juego.
 \begin{figure}[ht]
@@ -850,8 +853,8 @@ Por otro lado, dentro de esta pantalla también observamos los corazones de vida
 Para el desarrollo del proyecto hemos usado las siguientes herramientas:
 \begin{itemize}
     \item IntelliJ
-    \item Docker
-    \item Jooq
+    \item XAMPP
+    \item JDBC
     \item JDK 21
     \item Visual studio Code
     \item \LaTeX
@@ -1266,28 +1269,38 @@ suena de primeras simple, pero en ciertos niveles la dificultad es alta.
 \end{figure}
 \clearpage
 % ------------------------------------
+\subsection{Bases de datos en otros videojuegos}
+Otro concepto que también podríamos tener en cuenta es la tienda o mercado, es decir, hay muchos videojuegos actualmente que cuentan con una base de datos, por ejemplo, el videojuego \textit{Black Desert Online}, cuenta con un sistema de mercado, por medio de base de datos NoSQL, que es bastante extenso.
+Cabe destacar que este videojuego, gestiona miles de jugadores por segundo, ya que se trata de un videojuego de rol de multijugador masivo, es por eso, que necesita una base de datos muy rápida, estamos hablando de que existen millones de objetos en este videojuego con los que se gestionan operaciones mercantiles,
+incluso, existen miles de existencias de un mismo objeto que se vendan a diferentes precios, no es raro, encontrar un objeto vendiéndose a 30 mil monedas de juego y a 32 mil monedas de juego a la vez por diferentes personas, si a eso le sumamos, que cada persona puede poner las existencias que posea y quiera, estamos hablando,
+de que diariamente se estarían produciendo, millones de operaciones mercantiles sobre la base de datos, en un videojuego que acoge de media 200 mil jugadores aproximadamente. Como vemos, las cifras son gigantes, pero encontramos un patrón, juegos de este estilo, como el \textit{World of Warcraft}, \textit{Dota 2} o \textit{Final Fantasy XIV}, tienen en común,
+que usan bases de datos NoSQL, mientras que juegos menos pesados y con menos volumen de jugadores o de operaciones en la base de datos, usan bases de datos SQL, es el ejemplo de \textit{Clash of Clans}, que se trata de un juego móvil con un gran número de jugadores pero que en su base de datos, solamente almacena el progreso de cada jugador.
+Como vemos, en videojuegos con un alto número de operaciones, se usan bases de datos NoSQL, mientras que en juegos que requieren base de datos, pero no quieren usar por ejemplo bases de datos NoSQL, y usan SQL, vemos que suelen almacenar información del usuario y no del juego, como usuario, contraseña y alguna estadística del mismo dentro del juego.\\
+Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de datos en un servidor, como hacen la mayoría de videojuegos, de esta manera podríamos alquilar un host en \textit{AWS} y a partir de ahi generar algun sistema de login dentro del juego que almacene el progreso del jugador y sus objetos, como por ejemplo hace \textit{Activision}, con sus juegos de \textit{Call of Duty}.
+\clearpage
+% ------------------------------------
 \section{Bibliografia}
 % ------------------------------------
 \begin{itemize}
-    \item \textbf{Repositorio del juego} - \url{https://github.com/Pisa-17/TFG-DAM-Eldoria/tree/main}
-    \item \textbf{Excalidraw} - \url{https://excalidraw.com/}
-    \item \textbf{Manual LaTeX} - \url{https://manualdelatex.com/}
-    \item \textbf{Mermaid} - \url{https://mermaid.js.org/intro/getting-started.html}
-    \item \textbf{IntelliJ} - \url{https://www.jetbrains.com/es-es/idea/}
-    \item \textbf{Editor Pixelart} - \url{https://www.piskelapp.com/}
-    \item \textbf{Como hacer Assets} - \url{https://tips.clip-studio.com/es-es/articles/2484}
+    \item \textbf{\href{https://github.com/Pisa-17/TFG-DAM-Eldoria/tree/main}{Repositorio del juego}}
+    \item \textbf{\href{https://excalidraw.com/}{Excalidraw}}
+    \item \textbf{\href{https://manualdelatex.com/}{Manual de LaTex}}
+    \item \textbf{\href{https://mermaid.js.org/intro/getting-started.html}{Mermaid}}
+    \item \textbf{\href{https://www.jetbrains.com/es-es/idea/}{IntelliJ}} 
+    \item \textbf{\href{https://www.piskelapp.com/}{Editor Pixel art}}
+    \item \textbf{\href{https://tips.clip-studio.com/es-es/articles/2484}{Como hacer Assets}}
     \item \textbf{TFG de la Escuela de Segovia} - \url{https://uvadoc.uva.es/bitstream/handle/10324/24495/TFG-B%201042.pdf?sequence=1}
-    \item \textbf{Docker} - \url{https://www.docker.com/}
+    \item \textbf{XAMPP} - \url{https://www.dongee.com/tutoriales/que-es-xampp/}
     \item \textbf{Imagen Docker MySQL} - \url{https://hub.docker.com/_/mysql/}
-    \item \textbf{Out Of Memory Error} - \url{https://stackoverflow.com/questions/1596009/java-lang-outofmemoryerror-java-heap-space}
+    \item \textbf{\href{https://stackoverflow.com/questions/1596009/java-lang-outofmemoryerror-java-heap-space}{Out Of Memory Error}}
     \item \textbf{Assets} - \url{https://pixel-boy.itch.io/ninja-adventure-asset-pack}
     \item \textbf{Autor de los Assets} - \url{https://twitter.com/2Pblog1}
-    \item \textbf{JooQ} - \url{https://www.jooq.org/}
+    \item \textbf{JDBC} - \url{https://www.ibm.com/docs/es/informix-servers/12.10?topic=started-what-is-jdbc}
     \item \textbf{Visual Studio Code} - \url{https://code.visualstudio.com/Download}
     \item \textbf{Diagrama de clases IntelliJ} - \url{https://www.jetbrains.com/help/idea/class-diagram.html}
     \item \textbf{JDK 21} - \url{https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html}
-    \item \textbf{Retro Art Article} - \url{https://medium.com/@dq_irfandi/the-nostalgia-effect-how-retro-games-influence-modern-gaming-8925be77694e}
-    \item \textbf{Why retro games are so Loved?} - \url{https://www.wired.com/story/why-retro-looking-games-get-so-much-love/}
+    \item \textbf{\href{https://medium.com/@dq_irfandi/the-nostalgia-effect-how-retro-games-influence-modern-gaming-8925be77694e}{Retro Art Article}}
+    \item \textbf{\href{https://www.wired.com/story/why-retro-looking-games-get-so-much-love/}{Why retro games are so Loved?}}
     \item \textbf{How to list code in LaTeX} - \url{https://es.overleaf.com/learn/latex/Code_listing}
     \item \textbf{Libro - The Legend of Zelda Hyrule historia} - \url{https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Hyrule_Historia} - ISBN 978-1-61655-041-7
     \item \textbf{Web para hacer Diagramas de casos de uso online} - \url{https://online.visual-paradigm.com/drive/#infoart:proj=0&dashboard}
@@ -1309,7 +1322,7 @@ suena de primeras simple, pero en ciertos niveles la dificultad es alta.
         \item D - Mover el personaje a la derecha
         \item S - Mover el personaje hacia abajo
         \item C - Ver las estadisticas del personaje
-        \item P - Abrir el menu de Pausa
+        \item P - Abrir el menu de Pausa y listado de objetos
         \item ENTER - Interactuar con NPCs, atacar, aceptar o continuar.
     \end{itemize}
     \clearpage
