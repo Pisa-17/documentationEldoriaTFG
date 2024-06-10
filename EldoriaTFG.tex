@@ -57,9 +57,11 @@
     \centering % para centrar
     \includegraphics[width=0.5\textwidth]{Images/Eldoria.png}\par
     \vspace{0.4cm}
-    {\scshape\LARGE\textbf{TFG DAM - CIFP LaLaboral}\par} % Contenido de la portada
+    {\scshape\LARGE\textbf{Proyecto FP DAM - CIFP LaLaboral}\par} % Contenido de la portada
     \vspace{0.4cm}
     {\LARGE\textcolor{bluePortada}{Eldoria - Alejandro Orviz Recalde}\par}
+    \vspace{0.2cm} 
+    {\Large Tutor y tutora: Alberto Muñóz Blázquez y Marta Elena Menéndez Huerta\par}
 \end{titlepage}
 % Comienzo del TOC
 \clearpage
@@ -80,6 +82,7 @@ documentación, y por ultimo Miguel por haberme inspirado a realizar este videoj
 
 Las funciones de estas personas me han ayudado en mayor o menor medida a terminar este TFG, el cual no podría haber acabado sin ayuda, es por ello que reservo
 esta parte del docuemnto para agradecer a estas personas su colaboración conmigo, sobre todo a Carles y Laura, los cuales me han apoyado durante todo el desarollo.
+
 \clearpage
 % ---------------------------------------------------------------------
 \section{Introducción}
@@ -184,7 +187,7 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
           \end{itemize}
           \begin{figure}[!ht]
             \centering
-            \includegraphics[width=0.2\textwidth]{Images/t_visual-studio-code4470.jpg} 
+            \includegraphics[width=0.2\textwidth]{Images/Visual_Studio_Code_1.18_icon.png} 
             \caption{Logo de Visual studio code}
             \label{fig:visualstudio}
         \end{figure}
@@ -329,7 +332,7 @@ La penultima fase del proyecto, en esta se encontraria la recta final de desarro
 \end{flushright}
 
 \subsection{Junio - 2024}
-Última fase del proyecto en la que nos hemos centrado en la documentaciÓn del mismo aunque se ha hecho de manera transversal, pero se han dado los últimos retoques en esta fase ya que el desarrollo acabó el día 3. Dentro de esta fase hemos buscado muchas funciones y curiosidades para poder hacer un documento parecido a un TFG universitario pero a menor escala, para ello hemos visualizado y leído varios TFGs, de varias universidades de España y hemos tenido la suerte de poder tenerlos descargados para poder ver la estructura de los mismos, como se han escrito y tambien como se han desarollado las personas que los han realizado. Además se ha investigado sobre cómo realizar ciertas cosas dentro de la documentación, como varios índices, imágenes en un formato determinado, etc \dots
+Última fase del proyecto en la que nos hemos centrado en la documentación del mismo aunque se ha hecho de manera transversal, pero se han dado los últimos retoques en esta fase ya que el desarrollo acabó el día 3. Dentro de esta fase hemos buscado muchas funciones y curiosidades para poder hacer un documento parecido a un TFG universitario pero a menor escala, para ello hemos visualizado y leído varios TFGs, de varias universidades de España y hemos tenido la suerte de poder tenerlos descargados para poder ver la estructura de los mismos, como se han escrito y tambien como se han desarollado las personas que los han realizado. Además se ha investigado sobre cómo realizar ciertas cosas dentro de la documentación, como varios índices, imágenes en un formato determinado, etc \dots
 \begin{flushright}
     \bf Total de horas: 70 horas
 \end{flushright}
@@ -396,7 +399,7 @@ El equipo usado para el desarrollo ha sido un ordenador portatil HP, con un inte
         \hline
         Equipo usado                   & 820 €           \\
         \hline
-        \textbf{Total del presupuesto} & \textbf{4.645,2 €} \\
+        \textbf{Total del presupuesto} & \textbf{5.076,4 €} \\
         \hline
     \end{tabular}
     \caption{Tabla del presupuesto}
@@ -496,8 +499,14 @@ adelante en el manual de usuario, donde diremos como se controla el juego con la
     \label{fig:teclado}
 \end{figure}
 \subsection{Plataforma de despliegue}
-Para el despliegue de este programa usaremos un ordenador, en el cual tengamos el contendor de \textit{Docker} instalado y encendido, y también por último, que tenga la \textit{JDK 21}, instalada, además de que este
-despliegue ocurrirá en un sistema Windows primero, y después se barajará la posibilidad de desplegarlo en sistemas \textit{Linux}, basados en \textit{Debian}.
+Para el despliegue de la aplicación usaremos un ordenador que tenga XAMPP, ejecutado con Apache y MySQL, a partir de aqui, da un poco igual el SO, que usemos ya que la estructura es la misma, solamente necesitamos,
+que el ordenador dónde se despliegue tenga bien las dependencias necesarias para poder ejecutar el programa.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/Xampp_logo.png}
+    \caption{Imagen del logo de XAMPP}
+    \label{fig:xampplogo}
+\end{figure}
 \clearpage
 \subsection{Arquitectura logica}
 Estructura del proyecto en el diagrama de clases:
@@ -505,7 +514,7 @@ Estructura del proyecto en el diagrama de clases:
 % metemos la imagen de la carpeta images que se llama diagrama.png
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.7\textwidth]{Images/diagrama.jpg}
+    \includegraphics[width=1\textwidth]{Images/diagramadeclases.png}
     \caption{Diagrama de clases}
     \label{fig:diagrama-clases}
 \end{figure}
@@ -514,6 +523,9 @@ Estructura del proyecto en el diagrama de clases:
 Como podemos ver en el diagrama, hay varias clases importantes a lo largo de la estructura del mismo, que son, \textbf{Player, Gamepanel y Entidad}, estas clases son las más importantes ya que
 nos ayudan a definir muchas cosas.\\
 En el caso de \textit{Entidad}, nos permite desarrollar enemigos, objetos, npc y el propio jugador, ya que estos objetos, extienden de \textit{Entidad}, lo que deja que esta clase sea una clase llena de atributos.
+\begin{flushright}
+    \textit{Nota: No se han puesto los fields o atributos de cada clase en el diagrama debido a que Gamepanel y entidad cuentan con más de 20 atributos cada una y no permite ver el resto del diagrama}
+\end{flushright}
 \subsubsection{Metodo run}
 En cuanto a \textit{Gamepanel}, esta clase sería la encargada de tener el panel de juego y conectarse con todas las clases del proyecto, ya que, por ejemplo define
 el tamaño de los assetts, el tamaño del texto, y varios aspectos más de dentro del juego, esta clase además es de las más importantes ya que contiene parte de los métodos más críticos del proyecto como por ejemplo el siguiente.\\
@@ -521,7 +533,7 @@ el tamaño de los assetts, el tamaño del texto, y varios aspectos más de dentr
     \centering
     \includegraphics[width=0.7\textwidth]{Images/fpsMethod.PNG}
     \caption{Método del hilo principal}
-    \label{fig:metodos}
+    \label{fig:metodohiloprincipal}
 \end{figure}
 \\
 Este método empieza inicializando 6 variables que le servirán para calcular un \textit{delta}, para ello hace uso de esta ecuación:
@@ -556,7 +568,7 @@ Aun asi, vale la pena destacar varios métodos interesantes como el de \textit{"
     \centering
     \includegraphics[width=0.7\textwidth]{Images/loadmap.PNG}
     \caption{Método de carga de mapas}
-    \label{fig:metodos}
+    \label{fig:metodocargademapa}
 \end{figure}
 \\
 \textbf{Explicacion del metodo}\\
@@ -565,13 +577,15 @@ tiene una imagen u otra.\\
 Ahora de forma extensa, explicaremos paso por paso que hace este método:
 \begin{enumerate}
     \item \texttt{El método toma una cadena, \textit{"filepath"}, esta cadena se refiere a la ubicación del mapa en el sistema de archivos del ordenador, es decir, la ruta del archivo}
-    \item \texttt{"InputStream is = getClass().getResourceAsStream(filepath); BufferedReader br = new BufferedReader(new InputStreamReader(is));" esta parte del codigo lo que hace es crear un BufferReader que lee el archivo del mapa.}
+    \item \texttt{InputStream is = getClass().getResourceAsStream(filepath); BufferedReader br = \\
+    new BufferedReader(new InputStreamReader(is)); 
+    esta parte del codigo lo que hace es crear un BufferReader que lee el archivo del mapa.}
     \item \texttt{"getClass().getResourceAsStream(filepath)" lo que hace es localizar el archivo en el sistema.}
     \item \texttt{Las variables \textit{row} y \textit{col} nos sirven para saber en que posición del mapa se encuentra.}
     \item \texttt{"while (col < gp.maxWorldCol \&\& row < gp.maxWorldRow)" el bucle continua mientras no se llegue al final del mapa}
     \item \texttt{"String line = br.readLine();" simplemente lee una linea del archivo}
     \item \texttt{"while (col < gp.maxWorldCol)" el bucle se ejecuta para cada columna actual}
-    \item \texttt{"String numbers [] = line.split(" "); int num = Integer.parseInt(numbers[col]); mapTileNum[col][row] = num; col++;" aquí se divide la línea en números, se convierte cada número a un entero y se almacena en el array \textit{mapTileNum}}
+    \item \texttt{"String numbers [] = line.split(" "); int num = Integer.parseInt(numbers[col]);\\ mapTileNum[col][row] = num; col++;" aquí se divide la línea en números, se convierte cada número a un entero y se almacena en el array \textit{mapTileNum}}
     \item \texttt{"if (col == gp.maxWorldCol){ col = 0; row++; }" Cuando se ha llegado al final de una fila, se incrementa la variable \textit{row} y se reinicia la variable \textit{col}}
     \item \texttt{"br.close();" cierra el BufferReader.}
     \item \texttt{Y por ultimo el catch captura la excepcion en caso de que se produzca}
@@ -582,25 +596,27 @@ la máquina virtual de java, \textit{JVM} se queda sin memoria en el heap y deti
 \subsubsection{Método draw}
 Otro método interesante sería el método \textit{"draw"} de nuevo de la clase \textit{"TileMananger"}, el cual se encarga de dibujar las "casillas" de juego.\\
 De forma resumida, va dibujando las casillas en la posición determinada en el mapa del juego.\\
-\textbf{Explicación del método}\\
-Este método es bastante simple de entender si hemos entendido los anteriores, por lo que procederemos a su desglose:
-\begin{enumerate}
-    \item \texttt{"public void draw(Graphics2D g2)" primero recibe un objeto del tipo Graphics2D como argumento que usará para dibujar en pantalla.}
-    \item \texttt{"worlCol y worlRow" son las variables que usaremos para rastrear la posición en la que nos encontramos}
-    \item \texttt{"while(Wordlcol < gp.maxWorldCol \&\& WorldRow < gp.maxWorldRow)" este bucle continua mientras no lleguemos al final del mapa}
-    \item \texttt{"int tileNum = mapTileNum[Wordlcol][WorldRow]" y aqui obtenemos el número de la casilla que se va a dibujar}
-    \item \texttt{int worldX = Wordlcol * gp.tileSize; int worldy = WorldRow * gp.tileSize} aquí calculamos las coordenadas \texttt{x} e \texttt{y} del juego
-    \item \texttt{"int screenX = worldX - gp.player.wordlx + gp.player.ScreenX; int screenY = worldy - gp.player.wordly + gp.player.ScreenY" aqui se calculan las coordenadas de la pantalla}
-    \item \texttt{"g2.drawImage(tile[tileNum].image,screenX,screenY, null);" aqui dibujamos la casilla}
-    \item \texttt{Incrementamos las columnas de la variable que rastrea las columnas}
-    \item \texttt{"if (Wordlcol == gp.maxWorldCol){ Wordlcol = 0; WorldRow++; }" cuando se ha llegado al final de una fila, se incrementa la variable WorldRow y se reinicia la variable Wordlcol}
-\end{enumerate}
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/draw.PNG}
     \caption{Método de dibujado de mapas}
-    \label{fig:metodos}
+    \label{fig:metododibujadodemapa}
 \end{figure}
+
+\textbf{Explicación del método}\\
+Este método es bastante simple de entender si hemos entendido los anteriores, por lo que procederemos a su desglose:
+\begin{enumerate}
+    \item \texttt{public void draw(Graphics2D g2) primero recibe un objeto del tipo Graphics2D como argumento que usará para dibujar en pantalla.}
+    \item \texttt{worlCol y worlRow son las variables que usaremos para rastrear la posición en la que nos encontramos}
+    \item \texttt{while(Wordlcol < gp.maxWorldCol \&\& WorldRow < gp.maxWorldRow) este bucle continua mientras no lleguemos al final del mapa}
+    \item \texttt{int tileNum = mapTileNum[Wordlcol][WorldRow] y aqui obtenemos el número de la casilla que se va a dibujar}
+    \item \texttt{int worldX = Wordlcol * gp.tileSize; int worldy = WorldRow * gp.tileSize} aquí calculamos las coordenadas \texttt{x} e \texttt{y} del juego
+    \item \texttt{int screenX = worldX - gp.player.wordlx + gp.player.ScreenX; \\int screenY = worldy - gp.player.wordly + gp.player.ScreenY aqui se calculan las coordenadas de la pantalla}
+    \item \texttt{g2.drawImage(tile[tileNum].image,screenX,screenY, null); aqui dibujamos la casilla}
+    \item \texttt{Incrementamos las columnas de la variable que rastrea las columnas}
+    \item \texttt{"if (Wordlcol == gp.maxWorldCol){ Wordlcol = 0; WorldRow++; }" cuando se ha llegado al final de una fila, se incrementa la variable WorldRow y se reinicia la variable Wordlcol}
+\end{enumerate}
+
 
 
 \clearpage
@@ -608,19 +624,17 @@ Este método es bastante simple de entender si hemos entendido los anteriores, p
 \subsection{Diagrama de casos de uso}
 En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este actor realizaría varias funciones, como por ejemplo:
 \begin{itemize}
-    \item Crear una partida
-    \item Cargar una partida
     \item Empezar el juego
     \item Mover el personaje
     \item Pausar el juego
     \item Ver el estado del personaje
     \item Salir del juego
-    \item Activar eventos
     \item Combatir
     \item Interactuar con NPCs
     \item Obtener objetos, experiencia, dinero.
-    \item Comprar y Vender objetos
     \item Interactuar con el entorno
+    \item Leer de la base de datos
+    \item Morir
 \end{itemize}
 
 \begin{figure}[ht]
@@ -633,11 +647,11 @@ En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este acto
 \clearpage
 % -----------------------------------------------
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{14cm}|} 
+    \begin{tabular}{|c|p{12cm}|} 
         \hline
-        \textbf{Apartados}       & \textbf{CU1-Crear partida} \\
+        \textbf{Apartados}       & \textbf{CU1-Empezar juego} \\
         \hline
         Actor                    & Jugador \\
         \hline
@@ -646,178 +660,161 @@ En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este acto
         Frecuencia de uso        & Baja \\
         \hline
     \end{tabular}
-    \caption{Caso de uso 1 - Crear partida}
-    \label{tab:casosdeuso-table}
+    \caption{Caso de uso 1 - Empezar juego}
+    \label{tab:casosdeuso01-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{14cm}|} 
+    \begin{tabular}{|c|p{12cm}|} 
         \hline
-        \textbf{Apartados}       & \textbf{CU2-Cargar partida} \\
+        \textbf{Apartados}       & \textbf{CU2-Salir del juego} \\
         \hline
         Actor                    & Jugador \\
         \hline
-        Descripción              & El jugador selecciona en la pantalla del menú principal la opción de cargar una partida, lo que provoca la lectura de un archivo de guardado existente \\
+        Descripción              & El jugador selecciona en la pantalla del menú principal la opción de salir del juego, lo que provoca parada del programa \\
         \hline
         Frecuencia de uso        & Baja \\
         \hline
     \end{tabular}
-    \caption{Caso de uso 2 - Cargar partida}
-    \label{tab:casosdeuso-table}
+    \caption{Caso de uso 2 - Salir del juego}
+    \label{tab:casosdeuso2-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{14cm}|} 
+    \begin{tabular}{|c|p{12cm}|} 
         \hline
         \textbf{Apartados}       & \textbf{CU3-Mover personaje} \\
         \hline
         Actor                    & Jugador \\
         \hline
-        Descripción              & El jugador por medio de las teclas mueve el personaje en pantalla en cualquiera de las 4 direcciones \\
+        Descripción              & El jugador por medio de las teclas mueve el personaje en pantalla en cualquiera de las 4 direcciones dentro del CU1 \\
         \hline
         Frecuencia de uso        & Alta \\
         \hline
     \end{tabular}
     \caption{Caso de uso 3 - Mover personaje}
-    \label{tab:casosdeuso-table}
+    \label{tab:casosdeuso3-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{14cm}|} 
+    \begin{tabular}{|c|p{12cm}|} 
         \hline
-        \textbf{Apartados}       & \textbf{CU4-Obtener cosas} \\
+        \textbf{Apartados}       & \textbf{CU4-Combatir} \\
         \hline
         Actor                    & Jugador \\
         \hline
-        Descripción              & El jugador obtiene bien sean objetos, monedas o experiencia durante el tiempo de juego \\
+        Descripción              & El jugador dentro del CU1, y realizando el CU3, puede combatir contra enemigos \\
         \hline
         Frecuencia de uso        & Media \\
         \hline
     \end{tabular}
-    \caption{Caso de uso 4 - Obtener cosas}
-    \label{tab:casosdeuso-table}
+    \caption{Caso de uso 4 - Combatir}
+    \label{tab:casosdeuso4-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{14cm}|} 
+    \begin{tabular}{|c|p{12cm}|} 
         \hline
-        \textbf{Apartados}       & \textbf{CU5-Pausar el juego} \\
+        \textbf{Apartados}       & \textbf{CU5-Morir} \\
         \hline
         Actor                    & Jugador \\
         \hline
-        Descripción              & El jugador presiona la tecla "P" que pausa el juego totalmente, es decir, el juego queda totalmente congelado hasta que vuelva a pulsar la tecla "P" de nuevo \\
+        Descripción              & El jugador durante el CU1, y realizando el CU3 al llegar su vida a cero, muere, provocando este caso de uso \\
         \hline
         Frecuencia de uso        & Baja \\
         \hline
     \end{tabular}
-    \caption{Caso de uso 5 - Pausar el juego}
-    \label{tab:casosdeuso-table}
+    \caption{Caso de uso 5 - Morir}
+    \label{tab:casosdeuso5-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{14cm}|} 
+    \begin{tabular}{|c|p{12cm}|} 
         \hline
-        \textbf{Apartados}       & \textbf{CU6-Interactuar} \\
+        \textbf{Apartados}       & \textbf{CU6-Pausar el juego} \\
         \hline
         Actor                    & Jugador \\
         \hline
-        Descripción              & El jugador hablaría, chocaría o tocaría algun personaje o elemento del entorno del juego \\
+        Descripción              & El jugador durante el CU1, presiona la tecla \textit{P} y saca el menú de pausa y provoca también el CU7 \\
         \hline
         Frecuencia de uso        & Alta \\
         \hline
     \end{tabular}
-    \caption{Caso de uso 6 - Interactuar}
-    \label{tab:casosdeuso-table}
+    \caption{Caso de uso 6 - Pausar el juego}
+    \label{tab:casosdeuso6-table}
 \end{table}
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|c|p{14cm}|} 
+    \begin{tabular}{|c|p{12cm}|} 
         \hline
-        \textbf{Apartados}       & \textbf{CU7-Comprar} \\
-        \hline
-        Actor                    & Jugador \\
-        \hline
-        Descripción              & El jugador al realizar el caso de uso 6 "CU6", puede que interactue con un mercader, en este caso, puede comprar o vender, vender seria el "CU8" \\
-        \hline
-        Frecuencia de uso        & Baja \\
-        \hline
-    \end{tabular}
-    \caption{Caso de uso 7 - Comprar}
-    \label{tab:casosdeuso-table}
-\end{table}
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|p{14cm}|} 
-        \hline
-        \textbf{Apartados}       & \textbf{CU8-Vender} \\
+        \textbf{Apartados}       & \textbf{CU7-Leer la base de datos} \\
         \hline
         Actor                    & Jugador \\
         \hline
-        Descripción              & El jugador selecciona en la pantalla de inventario un objeto, lo que provoca la eliminación de una existencia de ese objeto en concreto o la resta en una o varias unidades las existencias del objeto a cambio de monedas \\
-        \hline
-        Frecuencia de uso        & Baja \\
-        \hline
-    \end{tabular}
-    \caption{Caso de uso 8 - Vender}
-    \label{tab:casosdeuso-table}
-\end{table}
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|p{14cm}|} 
-        \hline
-        \textbf{Apartados}       & \textbf{CU9-Empezar el juego} \\
-        \hline
-        Actor                    & Jugador \\
-        \hline
-        Descripción              & El jugador despues de realizar el CU1 o bien el CU2, realizaría esta acción \\
+        Descripción              & El jugador despues de realizar el CU6 leería datos acerca de varios objetos de la base de datos \\
         \hline
         Frecuencia de uso        & Alta \\
         \hline
     \end{tabular}
-    \caption{Caso de uso 9 - Empezar juego}
-    \label{tab:casosdeuso-table}
+    \caption{Caso de uso 7 - Leer de la base de datos}
+    \label{tab:casosdeuso7-table}
 \end{table}
 
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|c|p{14cm}|} 
+    \begin{tabular}{|c|p{12cm}|} 
+        \hline
+        \textbf{Apartados}       & \textbf{CU8-Obtener Objetos} \\
+        \hline
+        Actor                    & Jugador \\
+        \hline
+        Descripción              & El jugador durante el CU1 y el CU3, puede obtener objetos que estén repartidos por el mundo \\
+        \hline
+        Frecuencia de uso        & Media \\
+        \hline
+    \end{tabular}
+    \caption{Caso de uso 8 - Obtener objetos}
+    \label{tab:casosdeuso8-table}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|p{12cm}|} 
+        \hline
+        \textbf{Apartados}       & \textbf{CU9-Interactuar} \\
+        \hline
+        Actor                    & Jugador \\
+        \hline
+        Descripción              & El jugador estando en el CU1 y CU3, puede hablar con un actor, el \textit{NPC} \\
+        \hline
+        Frecuencia de uso        & Media \\
+        \hline
+    \end{tabular}
+    \caption{Caso de uso 9 - Interactuar}
+    \label{tab:casosdeuso9-table}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|p{12cm}|} 
         \hline
         \textbf{Apartados}       & \textbf{CU10-Ver estado} \\
         \hline
         Actor                    & Jugador \\
         \hline
-        Descripción              & El jugador presiona la tecla "C" despues de econtrarse dentro del CU9, y se le despliega una ventana nueva en la que aparecen las estadisticas de su personaje \\
+        Descripción              & El jugador estando en el CU1 y apretando la tecla \textit{C}, abriría la pantalla de estado que muestra estadísticas del personaje\\
         \hline
         Frecuencia de uso        & Media \\
         \hline
     \end{tabular}
     \caption{Caso de uso 10 - Ver estado}
-    \label{tab:casosdeuso-table}
-\end{table}
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{|c|p{14cm}|} 
-        \hline
-        \textbf{Apartados}       & \textbf{CU11-Combatir} \\
-        \hline
-        Actor                    & Jugador \\
-        \hline
-        Descripción              & El jugador estando en el CU9, puede realizar el CU6 y despues combatir, es decir intercambiar daño con un enemigo, por medio de sus armas \\
-        \hline
-        Frecuencia de uso        & Media \\
-        \hline
-    \end{tabular}
-    \caption{Caso de uso 11 - Combatir}
-    \label{tab:casosdeuso-table}
+    \label{tab:casosdeuso10-table}
 \end{table}
 
 \clearpage
@@ -836,19 +833,63 @@ De forma resumida sería la historia planeada para el videojuego, cabe destacar 
 \subsection{Pantallas del juego}
 Dentro de esta sección hablaremos de las pantallas que hemos desarrollado en el juego, es decir, el menú principal, el inventario, por ejemplo.\\
 Primero empezaremos con la pantalla del menú principal en la cual encontramos varios elementos.\\
-Para empezar, tenemos que tener en cuenta que esta pantalla se dibuja con el método \textit{drawTitleScreen}, este método, nos permite crear la pantalla del menú. A continuación, lo primero de lo que hablaremos es la imagen de fondo del juego, hemos optado por usar una imagen en vez de por ejemplo un color sólido, o un vídeo incluso, ya que nos parece más creativo que un color, pero más sencillo que un vídeo, tambén algo que cabe destacar es que hay otra imagen, en este caso del protagonista, hemos optado por poner al protagonista, ya que no hemos
-desarrollado ningún icono para el juego y por ejemplo, podríamos poner el icono que usamos dentro de la ventana main. Por otra parte, lo que tenemos son las letras, estas letras vienen hechas de la clase OverlayUI, la cual se encarga de estas características, también si nos fijamos, tenemos una especie de cursor, el cual nos permite seleccionar una opción de menú, esto se ve referenciado en el código referente a la lógica del menú principal.\\
-Dentro de esta pantalla no hay mucho que podamos hacer, es decir, fuera de elegir si queremos jugar, crear partida o salir del juego, no hay mucho más que se pueda hacer.\\
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/pantalla1tfg.png}
+    \caption{Pantalla menu principal}
+    \label{fig:pantalla1}
+\end{figure}
+Para empezar, tenemos que tener en cuenta que esta pantalla se dibuja con el método \textit{drawTitleScreen}, este método, nos permite crear la pantalla del menú. A continuación, lo primero de lo que hablaremos es del título de la pantalla
+es decir, como vemos tiene una especie de sombreado, esto se consigue dibujando el texto primeramente en negro y despues en blanco movido un poco a la derecha, también, si nos fijamos en el centro de la pantalla observamos que tenemos una imagen del jugador,
+esto aunque no sea de este propio apartado se puede tener en cuenta para futuras versiones, por ejemplo al seleccionar un personaje determinado, que aparezca en esta pantalla de título. Por último, vemos las opciones del juego, la primera es para cargar el juego, es decir
+iniciarlo desde cero, la segunda es cargar juego, a dia de hoy no tenemos sistema de guardado de partida por archivos o similar por lo que esta opción se ha dejado escrita para futuras actualizaciones. Por último tenemos la opción de salir, que cierra la ventana del programa y termina su ejecución.\\
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/pantalla2tfg.png}
+    \caption{Pantalla de juego}
+    \label{fig:pantalla2}
+\end{figure}
 La segunda pantalla a analizar es la pantalla de juego, en ella transcurse todo el programa realmente, tenemos un panel que sigue al jugador allá donde vaya, y que nos muestra los enemigos, npc y casillas del mapa, esta pantalla además cuenta con una variación que es la pantalla con inventario, esta pantalla nos muestra al lado izquierdo las estadísticas del jugador, y a otro lado el inventario del mismo con descripciones para cada objeto.
-Por otro lado, dentro de esta pantalla también observamos los corazones de vida del jugador. Y por último, la pantalla de pausa que simplemente es un cuadro con la palabra Pausa.
-
+Por otro lado, dentro de esta pantalla también observamos los corazones de vida del jugador.\\
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/pantalla3tfg.png}
+    \caption{Pantalla de inventario}
+    \label{fig:pantalla3}
+\end{figure}
+Esta sería la pantalla referente al inventario, de la que hemos hablado anteriormente, en esta pantalla, lo que tenemos son varios cuadros que nos otorgan informacion sobre el personaje, esta pantalla la podemos dividir en 3 partes,
+la primera parte es la del panel izquierdo que nos habla de las estadísticas, no tiene mucho misterio, simplemente nos muestra las estadísticas del jugador y una imagen del arma actual y el escudo o pergamino actual, el segundo panel sería el inventario en si, que es el panel derecho grande,
+este panel cuenta con un cursor y un dato curioso, los objetos que sean armas, una vez seleccionados, cambia el fondo del inventario a un color amarillo, como se ve en la imagen, este panel es navegable, es decir, podemos seleccionar objetos con el cursor que vemos en pantalla. Por último tenemos el panel de descripción, 
+se trata del panel derecho que se encuentra en la posición más baja, este panel se ocupa de mostrar un breve texto a modo de descripción acerca del objeto sobre el que el cursor está encima.\\
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/pantalla4tfg.png}
+    \caption{Pantalla de opciones}
+    \label{fig:pantalla4}
+\end{figure}
+Continuamos con la pantalla de opciones, en esta pantalla, lo que tenemos es lo siguiente, un recuadro en el que disponemos un título, despues varias opciones, con cuadrados, que los usamos a modo de checkbox, la primera opción, es la de pantalla completa, al darle a la tecla ENTER, se escribe automáticamente en el archivo
+config.txt en la primera linea On, esto hace que cuando el programa lea nada más arrancar el archivo vea que la opción, está activada, así el programa iniciaría en el modo de pantalla completa. La siguiente opción, sería relativa al volumen de la música de fondo, este controlador, por llamarlo de alguna manera, sube el volumen en una escala
+de 0 a 4, gracias a un cálculo producido en la clase \textit{Sonido} que tenemos dentro del proyecto, además dependiendo del volumen que dejemos escogido, en config.txt aparecerá en la segunda fila un número u otro, según el volumen. La última opción sería relativa a volver al menú principal, con esta opción iríamos a otra pantalla en la que podemos seleccionar si queremos ir al menú o no,
+actualmente estamos trabajando para que funcione bien la selección ya que de momento solo podemos escoger la opción del sí. Por último y no por ello, menos importante la opción de volver, esta opción cerraría este marco y nos devolvería al estado de juego.\\
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/pantalla5tfg.png}
+    \caption{Pantalla de Fin de juego}
+    \label{fig:pantalla5}
+\end{figure}
+Una de las pantallas más importantes, la pantalla de fin de juego o \textit{game over} como les gusta decir a los jugadores, esta pantalla aparace,  no es una pantalla que el jugador pueda activar con una tecla o seleccionando una opción, aparece, cuando la vida del jugador llega a cero, y nos provee de dos opciones,
+reintentar, que nos devuelve a la posición inicial y al principio del juego, o salir, que nos devuelve al menú principal.\\
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/pantalla6tfg.png}
+    \caption{Pantalla de Pausa y listado}
+    \label{fig:pantalla6}
+\end{figure}
+La última pantalla que veremos es la pantalla de pausa que introduce el concepto de base de datos, en este caso hemos optado por poner un listado simple de objetos, aunque para un trabajo de futuro se podría hacer un listado interactivo que cuente el progreso del jugador, o que diga que objetos se nos han escapado durante la aventura.
 
 \clearpage
 % -------------------------------------------------
-
-
-
 \section{Desarrollo realizado}
 Para el desarrollo del proyecto hemos usado las siguientes herramientas:
 \begin{itemize}
@@ -862,25 +903,58 @@ Para el desarrollo del proyecto hemos usado las siguientes herramientas:
     \item Github Repositories
     \item MySQL
 \end{itemize}
+Antes de comenzar la explicación del código pasaremos a explicar conceptualmente que hace el programa entero, ya que de esta manera, entenderemos mejor el código.
+\subsection{Detalles conceptuales}
+Este programa, sigue una filosofía clásica en cuestión al desarrollo del código, es decir, un videojuego, no deja de ser un hilo en bucle constante hasta que el jugador decide salir del juego o pararlo, en este caso hemos jugado con eso, y por ejemplo al ir entre
+diferentes pantallas, en vez de usar otro hilo, lo cual podría generar interbloqueos o condiciones de carrera, hemos optado por crear estados, en los cuales, definimos ciertas condiciones y prohibiciones al jugador, durante los mismos, por ejemplo en el estado de pausa,
+no se permite mover el personaje al jugador, en el estado de fin de juego, lo mismo, además que dependiendo del estado, ciertas teclas que antes funcionaban para mover el personaje, ahora servirían para mover el cursor de selección.\\
+También hay que tener en cuenta que este videojuego, se ejecuta sin motor de juego[1], es decir, esto tiene una gran ventaja y desventaja al mismo tiempo. La principal ventaja es un \textbf{mayor control y flexibilidad} a la hora de desarrollar funciones referentes al juego, el problema, es
+que esto añade \textbf{complejidad y tiempo de desarrollo} comparado con otros motores como \textit{Unity, Unreal Engine, Godot}, por ejemplo.\\
+La pregunta del millón, ¿Cómo funcionan las colisiones?, es una pregunta que se ha realizado durante la primera fase del desarrollo, como hacemos las colisiones dentro de este juego, pero primero debemos explicar, a que nos referimos con las colisiones.
+Con colisiones nos referimos a la \textit{hitbox}, una hitbox es una caja invisible que se utiliza en los videojuegos para detectar colisiones y registrar impactos entre objetos dentro del juego. Dentro del desarrollo lo que hemos hecho ha sido con \textit{swing}, desarrollar un cuadrado invisible,
+alrededor de los personajes y NPCs, que al entrar en contacto con otro cuadrado, no pueda moverse en las coordenadas x o y, esto de igual manera afectaría a casillas como por ejemplo la de los árboles, el problema de esto es que debemos hacer una \textit{hitbox común} en caso de tener las mismas dimensiones,
+con todos los personajes, o una \textit{hitbox} personalizada, en caso de tener personajes de varias dimensiones diferentes, un equivalente en \textit{Unity}, sería el \textit{Box collider}, en ese motor, gracias a esa opción, podemos desarrollar una hitbox personalizada que se adiere al \textit{GameObject} al que le hayamos,
+puesto esta opción.\\
+\begin{flushright}
+    [1]\textit{Un motor de juego es un software que proporciona un conjunto de herramientas y funcionalidades básicas necesarias para desarrollar videojuegos.}
+\end{flushright}
+
+
+\clearpage
+% --------------------------------------------------
 Ahora pasaremos a explicar el código de una manera más detallada, parándonos un poco más clase por clase para explicar lo que hemos desarrollado.
 \subsection{Detalles del codigo desarrollado}
 Empezaremos describiendo lo que realiza la clase principal, la clase \textit{"Main"}, cuyo código es:
 \begin{lstlisting}
     package main;
-
+    import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class Main {
+    public static JFrame win;
     public static void main(String args[]){
-        JFrame win = new JFrame();
+        win = new JFrame();
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         win.setResizable(false);
-        //win.setBackground(Color.black);
         win.setTitle("Eldoria");
+
+        try {
+            Image icon = ImageIO.read(Main.class
+                                .getResource("/player/icono.jpg"));
+            win.setIconImage(icon);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         GamePanel gpanel = new GamePanel();
         win.add(gpanel);
+
+        gpanel.config.loadConfig();
+        if (gpanel.fullScreenOn == true){
+            win.setUndecorated(true);
+        }
 
         win.pack();
 
@@ -892,10 +966,12 @@ public class Main {
     }
 }
 \end{lstlisting}
-% ----Cambiar por el tema de full screen------
 Dentro de este código encontramos varios aspectos a destacar, el primero es que estamos creando un JFrame en primera instancia y luego le estamos diciendo tambien que al darle a la "X", nos cierre el programa automaticamente.
 Continuamos diciéndole que no queremos un resize de la ventana actual del juego, por eso el false, seguimos con el titulo, y a continuacion la instancia de GamePanel, la cual nos servirá para instanciar más cosas.
 Centramos la ventana con el setLocationRelativeTo, la hacemos visible y le decimos a GamePanel que vaya dibujando ciertas cosas del videojuego e inicie el hilo principal del juego.\\
+
+Yendo más a fondo, en la parte del try lo que le cargamos al programa es el icono del mismo, queremos que exista un icono en la aplicación, por lo que lo realizamos bajo un try and catch, ya que puede producir una excepción,
+después de agregar el gpanel, lo que hacemos es saber si el juego está configurado con la pantalla completa, para ello cargamos la configuración del archivo config.txt, si la pantalla completa está en true, quitamos los bordes de la pantalla.\\
 
 Continuamos la explicación con la clase \textit{"Gamepanel"}, la cual es la encargada de realizar varias acciones principales dentro de la aplicación, si bien es cierto que hemos explicado algún método ya, explicaremos el resto
 que no son tan importantes pero igualmente son interesantes de saber.\\
@@ -1130,7 +1206,7 @@ el ataque del jugador, en este caso el código sería de la siguiente manera:
 \end{lstlisting}
 Este código lo primero que hace es sumar a spritecounter, esto sirve para cambiar la animación del jugador, si tuvieramos por ejemplo varios sprites de ataque, podríamos alternar entre ellos,
 jugando con spritecounter. A continuación cuando entramos al segundo condicional, lo que hacemos es, primero guardar la hitbox del jugador en unas variables que iremos cambiando conforme entremos,
-en la lógica, después entramos al switch que en este caso recoge como parametro la dirección en la que esta el jugador para poder crear una nueva hitbox, en este caso de ataque.
+en la lógica, después entramos al switch que en este caso recoge como parámetro la dirección en la que está el jugador para poder crear una nueva hitbox, en este caso de ataque.
 Continuamos cambiando las dimensiones de la hitbox y ahora comprobamos si esta última hitbox, ha chocado con un enemigo, en caso correcto se realizará la acción de perder vida sobre el enemigo, sino, no ocurrirá nada.
 En fases tempranas del desarrollo para probar esto, se puso una traza a modo de prueba en la que salía un mensaje por consola si fallabamos el ataque, así podiamos saber si acertabamos o no.\\
 \clearpage
@@ -1152,7 +1228,7 @@ public class Tile {
 Dentro de esta clase lo que vemos son dos atributos, la imagen, en este caso sería el asset, y un booleano que por defecto es false, este booleano es muy interesante, ya que es el encargado, de determinar si el Tile, es colisionable o no.\\
 Esta clase va de la mano realmente con una clase de la que ya hemos hablado \textit{TileManager}, esta clase se encarga de posicionar y recoger las casillas del tablero de juego, y además ayuda a dibujar las mismas, por otra parte, esta clase aunque,
 ya hemos hablado de ella, vamos a explicar un método más que igualmente es necesario explicar.
-\begin{lstlisting}[language=Java]
+\begin{lstlisting}
     public void setup(int index, String imageName, boolean collision){
         UtilityTool uTool = new UtilityTool();
 
@@ -1184,39 +1260,62 @@ cada número del mapa, sería el index, que buscará el método setup, el segund
 % ------------------------------------
 Un método intersante dentro de OverlayUI, puede ser el método encargado de dibujar el inventario, este método, tendría la siguiente forma:
 \begin{lstlisting}
-    private void drawInventory() {
-        int frameX = gp.tileSize * 12;
-        int frameY = gp.tileSize;
-        int frameWidth = gp.tileSize * 6;
-        int frameHeight = gp.tileSize * 5;
-        drawLetters(frameX, frameY, frameWidth, frameHeight);
-        //Slots
-        final int slotXStart = frameX + 20;
-        final int slotYStart = frameY + 20;
-        int slotX = slotXStart;
-        int slotY = slotYStart;
-        ///Draw player
-        for (int i = 0; i<gp.player.inventory.size(); i++){
-            if (gp.player.inventory.get(i) == gp.player.currentWeapon || gp.player.inventory.get(i) == gp.player.currentShield){
-                g2.setColor(new Color(240, 190,90));
-                g2.fillRoundRect(slotX,slotY,gp.tileSize,gp.tileSize,10,10);
-            }
+    private void drawInventory(Entidad entity, boolean cursor) {
 
-            g2.drawImage(gp.player.inventory.get(i).down1, slotX, slotY, null);
-            slotX += gp.tileSize;
-            if (slotX >= slotXStart + gp.tileSize * 5) { 
-                slotX = slotXStart;
-                slotY += gp.tileSize;
-            }
+    int frameX = 0;
+    int frameY = 0;
+    int frameWidth = 0;
+    int frameHeight = 0;
+    int slotRow = 0;
+    int slotCol = 0;
+    
+    if (entity == gp.player) {
+        frameX = gp.tileSize * 12;
+        frameY = gp.tileSize;
+        frameWidth = gp.tileSize * 6;
+        frameHeight = gp.tileSize * 5;
+        slotCol = playerslotCol;
+        slotRow = playerslotRow;
+    } else {
+        frameX = gp.tileSize * 12;
+        frameY = gp.tileSize;
+        frameWidth = gp.tileSize * 6;
+        frameHeight = gp.tileSize * 5;
+        slotCol = npcSlotCol;
+        slotRow = npcSlotRow;
+    }
+
+    drawLetters(frameX, frameY, frameWidth, frameHeight);
+    
+    // Slots
+    final int slotXStart = frameX + 20;
+    final int slotYStart = frameY + 20;
+    int slotX = slotXStart;
+    int slotY = slotYStart;
+
+    for (int i = 0; i < entity.inventory.size(); i++) {
+        if (entity.inventory.get(i) == entity.currentWeapon 
+        || entity.inventory.get(i) == entity.currentShield) {
+            g2.setColor(new Color(240, 190, 90));
+            g2.fillRoundRect(slotX, slotY, gp.tileSize, gp.tileSize, 10, 10);
         }
 
-        ///Cursor
+        g2.drawImage(entity.inventory.get(i).down1, slotX, slotY, null);
+        slotX += gp.tileSize;
+        if (slotX >= slotXStart + gp.tileSize * 5) { 
+            slotX = slotXStart;
+            slotY += gp.tileSize;
+        }
+    }
+
+    // Cursor
+    if (cursor) {
         int cursorX = slotXStart + (gp.tileSize * slotRow);
         int cursorY = slotYStart + (gp.tileSize * slotCol);
         int cursorWidth = gp.tileSize;
         int cursorHeight = gp.tileSize;
 
-        //Data cursor
+        // Data cursor
         g2.setColor(Color.white);
         g2.setStroke(new BasicStroke(3));
         g2.drawRoundRect(cursorX, cursorY, cursorWidth, cursorHeight, 10, 10);
@@ -1225,23 +1324,239 @@ Un método intersante dentro de OverlayUI, puede ser el método encargado de dib
         int dFrameX = frameX;
         int dFrameY = frameY + frameHeight;
         int dFrameWidth = frameWidth;
-        int dFrameHeight = gp.tileSize*3;
-        drawLetters(dFrameX,dFrameY,dFrameWidth,dFrameHeight);
+        int dFrameHeight = gp.tileSize * 3;
+        drawLetters(dFrameX, dFrameY, dFrameWidth, dFrameHeight);
 
         int textX = dFrameX + 20;
         int textY = dFrameY + gp.tileSize;
         g2.setFont(g2.getFont().deriveFont(28F));
 
-        int itemIndex = getIndexOfCursor();
+        int itemIndex = getIndexOfCursor(slotCol, slotRow);
 
-        if (itemIndex >= 0 && itemIndex < gp.player.inventory.size()) {
-            g2.drawString(gp.player.inventory.get(itemIndex).description, textX, textY);
+        if (itemIndex >= 0 && itemIndex < entity.inventory.size()) {
+            g2.drawString(entity.inventory
+            .get(itemIndex).description, textX, textY);
+        }
+    }
+}
+
+\end{lstlisting}
+Vamos a desglosar este método y explicarlo paso a paso:\\
+Con las primeras lineas:
+\begin{lstlisting}
+    if (entity == gp.player) {
+        frameX = gp.tileSize * 12;
+        frameY = gp.tileSize;
+        frameWidth = gp.tileSize * 6;
+        frameHeight = gp.tileSize * 5;
+        slotCol = playerslotCol;
+        slotRow = playerslotRow;
+    } else {
+        frameX = gp.tileSize * 12;
+        frameY = gp.tileSize;
+        frameWidth = gp.tileSize * 6;
+        frameHeight = gp.tileSize * 5;
+        slotCol = npcSlotCol;
+        slotRow = npcSlotRow;
+    }    
+\end{lstlisting}
+\begin{itemize}
+    \item Establece la posición y el tamaño del marco del inventario dependiendo de si la entidad (entity) es el jugador (gp.player) o un NPC
+    \item Ajusta la posición de la fila (slotRow) y columna (slotCol) del cursor en base a si la entidad es el jugador o un NPC.
+\end{itemize}
+Lo que hacemos es definir el marco del inventario, es decir, el fondo sobre el que escribiremos y posicionaremos lo que queremos ver.\\
+Las siguientes lineas:
+\begin{lstlisting}
+    final int slotXStart = frameX + 20;
+    final int slotYStart = frameY + 20;
+    int slotX = slotXStart;
+    int slotY = slotYStart;
+    
+    for (int i = 0; i < entity.inventory.size(); i++) {
+        if (entity.inventory.get(i) == entity.currentWeapon 
+        || entity.inventory.get(i) == entity.currentShield) {
+            g2.setColor(new Color(240, 190, 90));
+            g2.fillRoundRect(slotX, slotY, gp.tileSize, gp.tileSize, 10, 10);
+        }
+    
+        g2.drawImage(entity.inventory.get(i).down1, slotX, slotY, null);
+        slotX += gp.tileSize;
+        if (slotX >= slotXStart + gp.tileSize * 5) {
+            slotX = slotXStart;
+            slotY += gp.tileSize;
+        }
+    }
+    
+\end{lstlisting}
+Se refieren a los slots, o huecos del inventario, estos huecos serán más tarde ocupados por las imágenes de los objetos que tenga el personaje.\\
+A continuación, lo que hacemos con las siguientes lineas es dibujar los objetos que están en el array de inventario del jugador o de un npc:
+\begin{itemize}
+    \item Dibuja las casillas del inventario para la entidad actual, resaltando la casilla si el objeto es el arma o el escudo actual.
+    \item Las casillas se organizan en una cuadrícula, reiniciando slotX y avanzando slotY cuando se llega a la quinta columna.
+\end{itemize}
+En cuanto al dibujado del cursor, encontramos lo siguiente:
+\begin{lstlisting}
+    if (cursor) {
+        int cursorX = slotXStart + (gp.tileSize * slotRow);
+        int cursorY = slotYStart + (gp.tileSize * slotCol);
+        int cursorWidth = gp.tileSize;
+        int cursorHeight = gp.tileSize;
+    
+        // Data cursor
+        g2.setColor(Color.white);
+        g2.setStroke(new BasicStroke(3));
+        g2.drawRoundRect(cursorX, cursorY, cursorWidth, cursorHeight, 10, 10);
+    
+        // Description frame
+        int dFrameX = frameX;
+        int dFrameY = frameY + frameHeight;
+        int dFrameWidth = frameWidth;
+        int dFrameHeight = gp.tileSize * 3;
+        drawLetters(dFrameX, dFrameY, dFrameWidth, dFrameHeight);
+    
+        int textX = dFrameX + 20;
+        int textY = dFrameY + gp.tileSize;
+        g2.setFont(g2.getFont().deriveFont(28F));
+    
+        int itemIndex = getIndexOfCursor(slotCol, slotRow);
+    
+        if (itemIndex >= 0 && itemIndex < entity.inventory.size()) {
+            g2.drawString(entity.inventory
+            .get(itemIndex).description, textX, textY);
+        }
+    }    
+\end{lstlisting}
+\begin{itemize}
+    \item Primero si cursor es true, se dibuja el cursor en la posición actual calculada.
+    \item Y después muestra la descripción del objeto seleccionado en un cuadro debajo del inventario.
+\end{itemize}
+Algunas aclaraciones a tener en cuenta pueden ser que esta versión acepta cualquier Entidad (jugador o NPC) y ajusta el inventario en consecuencia, mientras que la versión anterior solo se centraba en el inventario del jugador.\\
+Reutilización del Código: Esta implementación es más reutilizable y modular, ya que el mismo método se puede utilizar para diferentes entidades, lo que simplifica el manejo del inventario en diferentes contextos dentro del juego.\\
+Pasaremos a explicar ahora un método muy usado que es el método drawLetters, a continuación adjuntamos su código:
+\begin{lstlisting}
+    private void drawLetters(int x, int y, int width, int height) {
+        Color backGround = new Color(0,0,0, 200);
+        g2.setColor(backGround);
+        g2.fillRoundRect(x,y,width,height,35,35);
+
+        backGround = new Color(255,255,255);
+        g2.setColor(backGround);
+        g2.setStroke(new BasicStroke(5));
+        g2.drawRoundRect(x+5,y+5,width-10,height-10,25,25);
+    }
+\end{lstlisting}
+Este código lo que hace mediante swing, es dibujar dos rectángulos con un cierto radio, el primer rectángulo es de color negro pero con una opacidad determinada, de ahi el último parámetro
+en la instancia de Color, después el primer rectángulo será el fondo, por lo que tendremos que usar el fillRoundRect, esto añade un radio, y le dice a swing que queremos pintar el interior, véase, que en
+la siguiente parte referente al borde, usamos drawRoundRect, que se refiere a la linea del borde, de lo que swing está dibujando, el grosor de esta línea lo controlamos a través de setStroke.\\
+Por último pasaremos a explicar en qué usamos la base de datos y cómo la usamos en el programa ya que es una opción de las muchas que pueden haber dentro del programa, interesantes:
+\begin{lstlisting}
+    public ArrayList<String> getObjectsFromDatabase() {
+        ArrayList<String> objects = new ArrayList<>();
+        try {
+            String url = "jdbc:mysql://localhost:3306/Eldoria";
+            String user = "root";
+            String password = "";
+
+            Connection conn = DriverManager.getConnection(url, user, password);
+            Statement stmt = conn.createStatement();
+
+            String sql = "SELECT name, existencias, precio FROM objects";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                String objectName = rs.getString("name");
+                int existencias = rs.getInt("existencias");
+                double precio = rs.getDouble("precio");
+
+                String objectInfo = "Nombre: " + objectName + ", 
+                Existencias: " + existencias + ", Precio: " + precio;
+                objects.add(objectInfo);
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            System.out.println("No se pudo conectar a la base de datos.");
+            e.printStackTrace();
+        }
+        return objects;
+    }
+\end{lstlisting}
+Este código de forma resumida, lo que realiza es un arraylist de objetos de la base de datos del juego, en este caso ubicada en un servidor simulado web de XAMPP.\\
+Ahora, yendo más al grano, las primeras líneas del try, probamos a realizar una conexión a la base de datos ubicada en localhost en el puerto 3306 y con el usuario root, sin contraseña, este código tal y como está representa una
+vulnerabilidad como bien nos ha indicado durante el desarrollo el IDE, en este caso la vulnerabilidad sería que están credenciales de acceso a una base de datos \textit{hardcodeadas} en el programa.
+Si seguimos hacia delante en el código, encontramos el DriverManager que nos permite realizar la conexión al pasarle los argumentos necesarios, después creamos un statement, y a continuación creamos la consulta SQL,
+en este caso la consulta realizada es Select name,existencias,precio from objects, esta consulta nos devuelve todos los objetos guardados en la base de datos. Recogemos el resultado en un objeto result set, y por último,
+añadimos al arraylist los datos de la base de datos, y cuando acabamos de obtener todos los datos, cerramos todo lo que hemos abierto para evitar posibles excepciones.\\
+¿Dónde se usa este método?\\
+Este método se llama en el menú de pausa:
+\begin{lstlisting}
+    public void drawPauseScreenState(){
+        String text = "Pausa";
+        int x = gp.tileSize * 2;
+        int y = gp.tileSize * 2;
+        int width = gp.tileSize*16;
+        int height = (int)(gp.tileSize *7.5);
+        drawLetters(x, y, width, height);
+        g2.setFont(g2.getFont().deriveFont(Font.PLAIN,79F));
+        x += gp.tileSize + 200;
+        y += gp.tileSize + 20;
+        g2.drawString(text,x,y);
+
+        g2.setFont(g2.getFont().deriveFont(32F));
+
+        ArrayList<String> objects = getObjectsFromDatabase();
+        System.out.println(objects);
+        y += gp.tileSize * 2;
+        x = gp.tileSize * 2;
+
+
+
+        for (String object : objects) {
+            g2.drawString(object, x+15, y);
+            y += gp.tileSize;
         }
 
     }
 \end{lstlisting}
+Como vemos, se llama en este método encargado de dibujar el menú de pausa, la idea principal de este método ha sido tener en el menú de pausa un listado de objetos importantes u objetos clave, para que el jugador pueda consultar que objetos debe buscar en el
+juego para completar la aventura, hemos añadido las existencias y el precio, en caso de que el jugador tenga que comprar el objeto en una futura tienda o encontrar varios en caso de que existan varios del mismo tipo.
+En el desarrollo hemos dejado varios objetos de ejemplo aunque, se podrían poner otros, como llaves por ejemplo, también se puede hacer que en vez de un listado sin más, aparezcan imágenes de los objetos a conseguir, y que exista una capa de opacidad negra en caso de no tenerlos obtenidos, 
+y que esta capa, se quite en función de si los hemos obtenido o no. Para esto habría que añadir otro atributo más a la base de datos que se llame \textit{Obtención}, por ejemplo.\\
+\clearpage
+% ------------------------------------
+Uno de los últimos métodos que merece la pena observar, es el método de checkear el volumen.
+\begin{lstlisting}
+    public void checkVol(){
+    switch (volumeScale){
+        case 0: volume = -80f; break;
+        case 1: volume = -20f;break;
+        case 2: volume = -12f;break;
+        case 3: volume = -5f;break;
+        case 4: volume = 1f;break;
+        case 5: volume = 6f;break;
+    }
+    fc.setValue(volume);
+}
+\end{lstlisting}
+Este método sigue la ecuación clásica de los decibelios:\\
+\[
+\text{dB} = 20 \log_{10} \left( \frac{P}{P_0} \right)
+\]
 
+\text{Donde}:
 
+\begin{itemize}
+    \item \text{dB} \text{ es el nivel de sonido en decibelios}
+    \item P \text{ es la presión acústica actual}
+    \item P0 \text{ es la presión acústica de referencia}
+\end{itemize}
+Y este método se encargaría de realizar un checkeo al volumen, y ponerlo mediante un switch al volumen adecuado cambiando sus dBs.
+
+\begin{flushright}
+    \textit{Fórmula sacada del libro de Configuración de infraestructuras de sistemas de telecomunicaciones}
+\end{flushright}
 \clearpage
 % ------------------------------------
 \section{Propuestas de mejora y trabajos futuros}
@@ -1257,15 +1572,42 @@ Dentro de esta sección vamos a nombrar ciertos apartados que se podrían añadi
     \item Misiones secundarias
     Misiones en las que no se avanza en la historia principal, pero se hacen misiones bien más fáciles o bien más difíciles que las principales, que tengan una recompensa mayor o menor en función de la dificultad, esto nos permitiría añadir incluso mapas nuevos, enemigos opcionales y jefes opcionales incluso, así como armas secretas.
 \end{itemize}
-Como trabajos futuros, nos podríamos plantear conceptos actuales ya vistos como por ejemplo \textit{Stardew Valley}, este videojuego nació de la misma manera que este propio tfg, como un tfg de universidad, el autor empezó a añadir más funciones y a completarlo cada día un poquito más,
-hasta que acabó convirtiéndose en un juego bastante querido por la comunidad de videojugadores, el juego se trata de un simulador de vida campesina, en el que debemos gestionar una granja que nos ha dejado nuestro abuelo, además tiene componentes RPG, como relacionarnos con npcs, y dependiendo
-de nuestra relación, pues nos darán unos objetos u otros. Otro ejemplo de trabajo futuro puede ser el videojuego \textit{Forager}, este último es un videojuego basado en el \textit{farming}, por lo que dentro de este juego nuestra meta será producir de la forma más eficiente los recursos que obtengamos,
-suena de primeras simple, pero en ciertos niveles la dificultad es alta.
+\textbf{Centralización de la base de datos}: Se detallará más abajo en un pequeño apartado, pero se podría centralizar la base de datos en un servidor central o ubicado por paises como el caso de los videojuegos actuales.
+\textbf{Mercado}: Aunque se ha tratado de implementar una función de mercado o tradeo con un npc, no ha podido ser implementada sin errores a tiempo, por lo que queda como propuesta de mejora, ya que es una opción interesante, típica en videojuegos de este estilo, además serviría para que el jugador, pueda recuperar vida de otra manera.
+\textbf{Guardado de partida}: Una función casi obligatoria en los videojuegos, guardar tu partida, ya sea en un archivo que genere el juego o en una base de datos, que guarde tu progreso.
+\clearpage
+% ---------------------------------
+\subsection{Trabajos futuros}
+En cuanto a trabajos futuros, cabe destacar la evolución de proyectos similares, que comenzaron como trabajos en escuelas, o universidades. Un ejemplo de esto, sería \textit{Stardew Valley}, es un videojuego que nació,
+como TFG universitario, y su creador Eric Barone, también conocido como ConcernedApe, empezó desarrollándolo en su tiempo libre, y fue agregando funciones y refinando el juego hasta que se convirtió en un título muy interesante, sobre simulación de vida campesina,
+con componentes RPG. \\
+\textbf{Stardew Valley}\\
+Es un simulador de vida rural en el que los jugadores deben gestionar una granja heredada del abuelo del personaje principal. A medida que los jugadores avanzan, pueden cultivar, criar animales, pescar, minar, y entablar relaciones con los NPCs (personajes no jugables) del pueblo. La calidad de estas relaciones influye en los objetos y recompensas que los NPCs ofrecen. Esta mezcla de simulación y elementos RPG ha capturado la atención de una gran audiencia, demostrando que un proyecto nacido de un TFG puede evolucionar significativamente con dedicación y tiempo.\\
+Algunos conceptos clave de este juego son:
+\begin{itemize}
+    \item Simulación de granjas
+    \item Componentes RPG
+    \item Evolución del proyecto, empezó como proyecto académico
+\end{itemize}
+Otro ejemplo que nos puede venir a la cabeza, es \textit{Forager}, un videojuego de tipo farming y exploración, desarrollado por \textit{HopFrog}. En este juego, los jugadores,
+deben producir recursos de la manera más eficiente, lo que parece simple al principio, pero en fases avanzadas se complica. La meta es construir una mejor base y explorar diversas islas, que cuentan con puzzles.\\
+Algunos conceptos clave de forager son:
+\begin{itemize}
+    \item Gestión de recursos
+    \item Exploración y Puzzles
+    \item Progresión de dificultad
+\end{itemize}
+Estos ejemplos se pueden aplicar a Eldoria ya que, nos proveen de conceptos como:
+\begin{itemize}
+    \item Mejora continua
+    \item Expansión de funcionalidades
+    \item Optimización de la experiencia de juego
+\end{itemize}
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.3\textwidth]{Images/Logo_of_Stardew_Valley.png}
     \caption{Imagen de Stardew Valley}
-    \label{fig:player}
+    \label{fig:stardewValley}
 \end{figure}
 \clearpage
 % ------------------------------------
@@ -1277,12 +1619,52 @@ de que diariamente se estarían produciendo, millones de operaciones mercantiles
 que usan bases de datos NoSQL, mientras que juegos menos pesados y con menos volumen de jugadores o de operaciones en la base de datos, usan bases de datos SQL, es el ejemplo de \textit{Clash of Clans}, que se trata de un juego móvil con un gran número de jugadores pero que en su base de datos, solamente almacena el progreso de cada jugador.
 Como vemos, en videojuegos con un alto número de operaciones, se usan bases de datos NoSQL, mientras que en juegos que requieren base de datos, pero no quieren usar por ejemplo bases de datos NoSQL, y usan SQL, vemos que suelen almacenar información del usuario y no del juego, como usuario, contraseña y alguna estadística del mismo dentro del juego.\\
 Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de datos en un servidor, como hacen la mayoría de videojuegos, de esta manera podríamos alquilar un host en \textit{AWS} y a partir de ahi generar algun sistema de login dentro del juego que almacene el progreso del jugador y sus objetos, como por ejemplo hace \textit{Activision}, con sus juegos de \textit{Call of Duty}.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/itemblackdesert.png}
+    \caption{Imagen de Black Desert Online, item en venta}
+    \label{fig:fullscreen}
+\end{figure}
+\clearpage
+% ------------------------------------
+\section{Repositorios del Proyecto}
+Este TFG, se divide en dos repositorios, uno que contiene el código de la aplicación y otro que contiene la documentación del mismo, adjuntamos foto de ambos.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/codigorepo.png}
+    \caption{Repositorio del codigo}
+    \label{fig:codigorepo}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/documentacionrepo.png}
+    \caption{Repositorio de la documentación}
+    \label{fig:documentacionrepo}
+\end{figure}
+\clearpage
+% ------------------------------------
+\subsection{Readme de los repositorios}
+Vamos a enseñar brevemente el readme de ambos repositorios, cabe destacar que no es el readme entero y se recomienda ehcar un ojo a ambos repositorios
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/readmecodigorepo.png}
+    \caption{Readme del código}
+    \label{fig:repocodreadme}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Images/readmedocumentation.png}
+    \caption{Readme de la documentación}
+    \label{fig:documentacionreporeadme}
+\end{figure}
+
 \clearpage
 % ------------------------------------
 \section{Bibliografia}
 % ------------------------------------
 \begin{itemize}
     \item \textbf{\href{https://github.com/Pisa-17/TFG-DAM-Eldoria/tree/main}{Repositorio del juego}}
+    \item \textbf{\href{https://github.com/Pisa-17/documentationEldoriaTFG/tree/main}{Repositorio de la documentación}}
     \item \textbf{\href{https://excalidraw.com/}{Excalidraw}}
     \item \textbf{\href{https://manualdelatex.com/}{Manual de LaTex}}
     \item \textbf{\href{https://mermaid.js.org/intro/getting-started.html}{Mermaid}}
@@ -1291,7 +1673,6 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
     \item \textbf{\href{https://tips.clip-studio.com/es-es/articles/2484}{Como hacer Assets}}
     \item \textbf{TFG de la Escuela de Segovia} - \url{https://uvadoc.uva.es/bitstream/handle/10324/24495/TFG-B%201042.pdf?sequence=1}
     \item \textbf{XAMPP} - \url{https://www.dongee.com/tutoriales/que-es-xampp/}
-    \item \textbf{Imagen Docker MySQL} - \url{https://hub.docker.com/_/mysql/}
     \item \textbf{\href{https://stackoverflow.com/questions/1596009/java-lang-outofmemoryerror-java-heap-space}{Out Of Memory Error}}
     \item \textbf{Assets} - \url{https://pixel-boy.itch.io/ninja-adventure-asset-pack}
     \item \textbf{Autor de los Assets} - \url{https://twitter.com/2Pblog1}
@@ -1305,7 +1686,7 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
     \item \textbf{Libro - The Legend of Zelda Hyrule historia} - \url{https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Hyrule_Historia} - ISBN 978-1-61655-041-7
     \item \textbf{Web para hacer Diagramas de casos de uso online} - \url{https://online.visual-paradigm.com/drive/#infoart:proj=0&dashboard}
     \item \textbf{Landing on Blasphemous - Documental} - \url{https://youtu.be/lk--if_7J9g?si=kpGDZ2x66cMYwh1K}
-    \item \textbf{Python} - \url{https://www.python.org/downloads/release/python-3123/}
+    \item \textbf{Libro Configuración de infraestructuras de sistemas de telecomunicaciones} - ISBN 978-84-9732-934-7
 \end{itemize}
 
 \clearpage
@@ -1349,8 +1730,8 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
         \begin{figure}[ht]
             \centering
             \includegraphics[width=0.1\textwidth]{Images/monster1.png}
-            \caption{Imagen del ciclope}
-            \label{fig:player}
+            \caption{Imagen del cíclope}
+            \label{fig:ciclope}
         \end{figure}
         \begin{itemize}
             \item El enemigo principal del juego, es el enemigo contra el que generalmente lucharemos a lo largo de la aventura.
@@ -1360,7 +1741,7 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
             \centering
             \includegraphics[width=0.1\textwidth]{Images/arboles.png}
             \caption{Imagen del árbol}
-            \label{fig:player}
+            \label{fig:arbol}
         \end{figure}
         \begin{itemize}
             \item Esta sería el asset para el árbol que adorna parte del mundo.
@@ -1371,8 +1752,8 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
         \begin{figure}[ht]
             \centering
             \includegraphics[width=0.1\textwidth]{Images/cesped1.png}
-            \caption{Imagen del cesped}
-            \label{fig:player}
+            \caption{Imagen del césped}
+            \label{fig:cesped}
         \end{figure}
         \begin{itemize}
             \item Este sería el césped usado, uno de los varios assets del juego.
@@ -1381,7 +1762,7 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
             \centering
             \includegraphics[width=0.1\textwidth]{Images/agua.png}
             \caption{Imagen del agua}
-            \label{fig:player}
+            \label{fig:agua}
         \end{figure}
         \begin{itemize}
             \item Asset usado para el agua del juego.
@@ -1390,7 +1771,7 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
             \centering
             \includegraphics[width=0.1\textwidth]{Images/arena.png}
             \caption{Imagen de arena o camino}
-            \label{fig:player}
+            \label{fig:arena}
         \end{figure}
         \begin{itemize}
             \item Asset usado para simular un camino dentro del mapa.
@@ -1399,7 +1780,7 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
             \centering
             \includegraphics[width=0.1\textwidth]{Images/rocas.png}
             \caption{Imagen de las rocas}
-            \label{fig:player}
+            \label{fig:rocas}
         \end{figure}
         \begin{itemize}
             \item Asset usada para las rocas del mapa.
@@ -1412,7 +1793,7 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
             \centering
             \includegraphics[width=0.1\textwidth]{Images/monje.png}
             \caption{Imagen del monje}
-            \label{fig:player}
+            \label{fig:monje}
         \end{figure}
         \begin{itemize}
             \item El famoso npc llamado \textit{sabio}, este npc fue el que hemos usado durante el desarollo para probar dialogos e interacciones con el jugador.
@@ -1422,7 +1803,7 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
             \centering
             \includegraphics[width=0.05\textwidth]{Images/katana.png}
             \caption{Imagen de la katana}
-            \label{fig:player}
+            \label{fig:katana}
         \end{figure}
         \begin{itemize}
             \item Arma principal del protagonista, con esta arma empieza el videojuego el protagonista.
@@ -1432,7 +1813,7 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
             \centering
             \includegraphics[width=0.05\textwidth]{Images/rapier.png}
             \caption{Imagen del estoque o rapier}
-            \label{fig:player}
+            \label{fig:rapier}
         \end{figure}
         \begin{itemize}
             \item Asset usado para el estoque o rapier, un arma más poderosa que la katana que inflinge algo más de daño.
@@ -1525,9 +1906,9 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
     \section{Anexo IV - Vocablos usados}
     Durante este documento se han hecho uso de varios vocablos de los que seguramente se desconozca el significado, tales como "FPS" por ejemplo, por ello vamos a recopilarlos aqui junto a su definicion.
     \begin{itemize}
-        \item FPS Frames per second - Imágenes que dibuja el programa por segundo, un frame es toda la imagen que dibuja el programa entera, con el personaje, el mapa, los objetos, etc \dots
-        \item RPG Role playing game - Acrónimo asociado a los juegos de Rol
-        \item NPC Non Playable Character - Personaje no jugable, suelen ser personajes con los que podemos hablar o Interactuar
+        \item FPS Frames per second - Es la cantidad de imágenes que una pantalla puede mostrar en un segundo. Cuanto mayor sea el número de FPS, más suave y fluida será la visualización de un video o juego.
+        \item RPG Role playing game - Es un género de videojuegos donde los jugadores asumen los roles de personajes en un mundo ficticio, siguiendo una narrativa y tomando decisiones que afectan la historia y el desarrollo del personaje.
+        \item NPC Non Playable Character - Es cualquier personaje en un videojuego que no es controlado por el jugador, sino por la inteligencia artificial (IA) del juego. Estos personajes interactúan con el jugador, proporcionan información, misiones, desafíos, o ayudan a desarrollar la historia del juego.
         \item Inputs - Se refiere a las entradas del usuario al programa
         \item Pixel art - Estética basada en dibujar con pixeles solamente sin ningun arco o elemento circular
         \item Retro - Se refiere a una estética antigua, por ejemplo la de los juegos de los años 80
