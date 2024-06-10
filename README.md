@@ -1,8 +1,8 @@
-# Documentación del Trabajo de Fin de Grado (TFG) de Eldoria
+# Documentación del Proyecto de Eldoria
 
 ## Descripción del Proyecto
 
-Este repositorio contiene la documentación LaTeX del Trabajo de Fin de Grado (TFG) de Eldoria, un proyecto que combina elementos de aventura, acción y RPG en un videojuego 2D. Además del código LaTeX, se incluye el archivo PDF generado con la documentación completa, que abarca desde la introducción hasta la bibliografía.
+Este repositorio contiene la documentación LaTeX del Proyecto de Eldoria, un proyecto que combina elementos de aventura, acción y RPG en un videojuego 2D. Además del código LaTeX, se incluye el archivo PDF generado con la documentación completa, que abarca desde la introducción hasta la bibliografía.
 
 ## Tecnologías usadas
 <p align="center">
