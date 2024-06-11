@@ -39,7 +39,7 @@ Este repositorio contiene la documentación LaTeX del Proyecto de Eldoria, un pr
 
 ## Contribuciones y Contacto
 
-¡Se aceptan contribuciones para mejorar la documentación del TFG de Eldoria! Si tienes sugerencias, comentarios o deseas colaborar de alguna manera, no dudes en ponerte en contacto con el autor del proyecto a través de su cuenta de GitHub.
+Se aceptan contribuciones para mejorar la documentación del proyecto de FP de Eldoria. Si tienes sugerencias, comentarios o deseas colaborar de alguna manera, no dudes en ponerte en contacto con el autor del proyecto a través de su cuenta de su correo de contacto.
 
 ## Licencia
 
