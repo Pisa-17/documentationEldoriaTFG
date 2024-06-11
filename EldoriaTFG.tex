@@ -23,6 +23,8 @@
 %\usepackage{minted} % Paquete para resaltado de sintaxis
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{fontawesome5} % Importa el paquete de íconos
+\usepackage{pdflscape}
 
 % Sets de dimensiones
 \setlength{\parindent}{0pt}
@@ -60,7 +62,7 @@
     {\scshape\LARGE\textbf{Proyecto FP DAM - CIFP LaLaboral}\par} % Contenido de la portada
     \vspace{0.4cm}
     {\LARGE\textcolor{bluePortada}{Eldoria - Alejandro Orviz Recalde}\par}
-    \vspace{0.2cm} 
+    \vspace{0.2cm}
     {\Large Tutor y tutora: Alberto Muñóz Blázquez y Marta Elena Menéndez Huerta\par}
 \end{titlepage}
 % Comienzo del TOC
@@ -80,7 +82,7 @@ Este proyecto no sería posible sin la ayuda de varias personas involucradas en 
 Laura por darme parte de sus conocimientos en el desarrollo de videojuegos para poder desarrollar bien, Marta la tutora por resolverme dudas y otorgarme
 documentación, y por ultimo Miguel por haberme inspirado a realizar este videojuego, el cual está dedicado hacia él.
 
-Las funciones de estas personas me han ayudado en mayor o menor medida a terminar este TFG, el cual no podría haber acabado sin ayuda, es por ello que reservo
+Las funciones de estas personas me han ayudado en mayor o menor medida a terminar este proyecto de FP, el cual no podría haber acabado sin ayuda, es por ello que reservo
 esta parte del docuemnto para agradecer a estas personas su colaboración conmigo, sobre todo a Carles y Laura, los cuales me han apoyado durante todo el desarollo.
 
 \clearpage
@@ -147,7 +149,7 @@ Este juego además tiene varias inspiraciones en el mundo moderno y \textit{retr
 \subsection{Herramientas usadas}
 En esta sección, explicaremos brevemente las herramientas usadas, y el por qué de las mismas, así como su coste en el caso de que sean de pago.
 
-Para el desarrollo de este TFG, se han usado las siguientes herramientas:
+Para el desarrollo de este proyecto de FP, se han usado las siguientes herramientas:
 \begin{enumerate}
     \item \textbf{IntelliJ Idea Community y Ultimate}
           \begin{itemize}
@@ -156,23 +158,23 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
               \item \textbf{El precio de este IDE, actualmente(Mayo/2024) es de: 160 euros al mes}
           \end{itemize}
           \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/IntelliJ_IDEA_Icon.svg.png} 
-            \caption{Logo de IntelliJ IDEA}
-            \label{fig:intellij}
-        \end{figure}
-        
+              \centering
+              \includegraphics[width=0.1\textwidth]{Images/IntelliJ_IDEA_Icon.svg.png}
+              \caption{Logo de IntelliJ IDEA}
+              \label{fig:intellij}
+          \end{figure}
+
     \item \textbf{XAMPP}
           \begin{itemize}
               \item \textbf{XAMPP} es un paquete de software gratuito y de código abierto desarrollado por Apache Friends, que proporciona una solución fácil de instalar para configurar un servidor web local. XAMPP incluye Apache, MySQL (o MariaDB), PHP y Perl, entre otros componentes.
-              \item El nombre \textit{XAMPP} es un acrónimo que viene de: 
-              \begin{itemize}
-                \item X: Plataforma cruzada (Cross-platform)
-                \item A: Apache (servidor web)
-                \item M: MySQL o MariaDB (sistema de gestión de bases de datos)
-                \item P: PHP (lenguaje de scripting del lado del servidor)
-                \item P: Perl (lenguaje de programación)
-              \end{itemize}
+              \item El nombre \textit{XAMPP} es un acrónimo que viene de:
+                    \begin{itemize}
+                        \item X: Plataforma cruzada (Cross-platform)
+                        \item A: Apache (servidor web)
+                        \item M: MySQL o MariaDB (sistema de gestión de bases de datos)
+                        \item P: PHP (lenguaje de scripting del lado del servidor)
+                        \item P: Perl (lenguaje de programación)
+                    \end{itemize}
           \end{itemize}
     \item \textbf{JDBC}
           \begin{itemize}
@@ -186,11 +188,11 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
               \item Para desarrollar el documento, hemos tenido que descargarnos \textit{Perl}, \textit{LaTeX Workshop} y por ultimo \textit{MikTex}, esto es necesario si queremos que Visual Studio nos deje desarrollar cualquier docuemnto \LaTeX, además de un plugin para poder visualizar el documento pdf compilado desde Visual Studio.
           \end{itemize}
           \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.2\textwidth]{Images/Visual_Studio_Code_1.18_icon.png} 
-            \caption{Logo de Visual studio code}
-            \label{fig:visualstudio}
-        \end{figure}
+              \centering
+              \includegraphics[width=0.2\textwidth]{Images/Visual_Studio_Code_1.18_icon.png}
+              \caption{Logo de Visual studio code}
+              \label{fig:visualstudio}
+          \end{figure}
     \item \textbf{\LaTeX}
           \begin{itemize}
               \item \textbf{\LaTeX} es un sistema de composición de textos orientado a la creación de documentos escritos que presenten una alta calidad tipográfica. Por sus características y posibilidades, se usa de forma especialmente intensa en la generación de artículos y libros científicos que incluyen, entre otros elementos, expresiones matemáticas.
@@ -198,22 +200,22 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
               \item Para poder desarrollar el documento de la memoria en \LaTeX, hemos hecho uso de la documentación que existe en internet, asi como documentos ya hechos, por ejemplo repositorios de gente que ya ha realizado un documento \LaTeX, aunque la plantilla usada en este documento esta realizada desde cero.
           \end{itemize}
           \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.2\textwidth]{Images/LaTeX_project_logo_bird.svg.png} 
-            \caption{Logo de LaTex Project}
-            \label{fig:latexlogo}
-        \end{figure}
+              \centering
+              \includegraphics[width=0.2\textwidth]{Images/LaTeX_project_logo_bird.svg.png}
+              \caption{Logo de LaTex Project}
+              \label{fig:latexlogo}
+          \end{figure}
     \item \textbf{MySql}
           \begin{itemize}
               \item \textbf{MySql} es un sistema de gestión de bases de datos relacional desarrollado bajo licencia dual: Licencia pública general/Licencia comercial por \textit{Oracle Corporation} y está considerada como la base de datos de código abierto más popular del mundo, y una de las más populares en general junto a \textit{Oracle} y \textit{Microsoft SQL Server}, todo para entornos de desarrollo web.
               \item \textbf{MySql} fue inicialmente desarrollado por \textit{MySQL AB} (empresa fundada por David Axmark, Allan Larsson y Michael Widenius). \textit{MySQL AB} fue adquirida por \textit{Sun Microsystems} en 2008, y ésta a su vez fue comprada por \textit{Oracle Corporation} en 2010, la cual ya era dueña desde 2005 de Innobase Oy, empresa finlandesa desarrolladora del motor \textit{InnoDB} para \textit{MySQL}. Fácil de usar y simple de implementar. Razones por las cuales, es tambien una de las más usadas.
           \end{itemize}
           \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.25\textwidth]{Images/MySQL-Logo.png} 
-            \caption{Logo de MySQL}
-            \label{fig:MYSQLLOGO}
-        \end{figure}
+              \centering
+              \includegraphics[width=0.25\textwidth]{Images/MySQL-Logo.png}
+              \caption{Logo de MySQL}
+              \label{fig:MYSQLLOGO}
+          \end{figure}
     \item \textbf{JDK 21}
           \begin{itemize}
               \item \textbf{JDK o \textit{Java Development Kit}} es una serie de herramientas de desarrollo que nos permite crear software en \textit{Java}, además de poder ejecutar archivos \textit{"Jar"} desarrollados con esta \textit{JDK}. Hemos decidido usar la última versión para estar libres de problemas de que nos hagan falta paquetes o de vulnerabilidades.
@@ -227,11 +229,11 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
               \item \textbf{Excalidraw} es una web que nos ofrece una pizarra virtual en la que poder dibujar, hacer notas o generar diagramas incluso, como los diagramas UML de software, además cuenta con bastantes opciones a la hora de exportar lo dibujado, y es una herramienta muy útil para hacer esquemas.
           \end{itemize}
           \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.2\textwidth]{Images/logoExcalidraw.png} 
-            \caption{Logo de Excalidraw}
-            \label{fig:excalidraw}
-        \end{figure}
+              \centering
+              \includegraphics[width=0.2\textwidth]{Images/logoExcalidraw.png}
+              \caption{Logo de Excalidraw}
+              \label{fig:excalidraw}
+          \end{figure}
 \end{enumerate}
 \clearpage
 %-----------------------------------------------------
@@ -284,7 +286,7 @@ Para el desarrollo de este TFG, se han usado las siguientes herramientas:
 \subsection{Planificacion}
 Este proyecto se ha desarrollado en varias fases como un desarrollo real en un entorno empresarial, empezando en \textit{Octubre de 2023}(los totales de horas son aproximados).
 \subsection{Septiembre - 2023}
-En esta fase comenzó el descarte de ideas y la lluvia de las misma para saber más o menos que podríamos hacer en cuanto a TFG se refiere.
+En esta fase comenzó el descarte de ideas y la lluvia de las misma para saber más o menos que podríamos hacer en cuanto a proyecto se refiere.
 \begin{flushright}
     \bf Total de horas: 10 horas
 \end{flushright}
@@ -365,7 +367,6 @@ La penultima fase del proyecto, en esta se encontraria la recta final de desarro
 \clearpage
 % -----------------------------------------
 \subsection{Presupuesto}
-% Your content here
 
 Dentro de esta parte del proyecto hemos intentado abaratar en algunas partes costes y en otras no nos ha quedado más remedio que tener que pagar, ya que o bien nos ofrecen un servicio/funcionalidad que necesitamos o bien es un programa con el que estamos muy familiarizados. Por lo que en este apartado explicaremos parte de las herramientas usadas, ya que algunas son de pago. \\
 \subsubsection{IntelliJ Idea}
@@ -391,15 +392,17 @@ El equipo usado para el desarrollo ha sido un ordenador portatil HP, con un inte
     \centering
     \begin{tabular}{|c|c|}
         \hline
-        \textbf{Sección}               & \textbf{Coste}      \\
+        \textbf{Sección}               & \textbf{Coste}     \\
         \hline
-        IntelliJ                       & 160 €           \\
+        IntelliJ                       & 160 €              \\
         \hline
-        Horas de trabajo               & 10.78 €/hora     \\
+        Horas de trabajo               & 10.78 €/hora       \\
         \hline
-        Equipo usado                   & 820 €           \\
+        Equipo usado                   & 820 €              \\
         \hline
-        \textbf{Total del presupuesto} & \textbf{5.076,4 €} \\
+        Equipo usado en pruebas        & 1350 €             \\
+        \hline
+        \textbf{Total del presupuesto} & \textbf{6.426,4 €} \\
         \hline
     \end{tabular}
     \caption{Tabla del presupuesto}
@@ -511,13 +514,14 @@ que el ordenador dónde se despliegue tenga bien las dependencias necesarias par
 \subsection{Arquitectura logica}
 Estructura del proyecto en el diagrama de clases:
 \subsubsection{Diagrama de clases}
-% metemos la imagen de la carpeta images que se llama diagrama.png
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Images/diagramadeclases.png}
     \caption{Diagrama de clases}
     \label{fig:diagrama-clases}
 \end{figure}
+
 
 \subsubsection{Explicaciones del diagrama}
 Como podemos ver en el diagrama, hay varias clases importantes a lo largo de la estructura del mismo, que son, \textbf{Player, Gamepanel y Entidad}, estas clases son las más importantes ya que
@@ -578,8 +582,8 @@ Ahora de forma extensa, explicaremos paso por paso que hace este método:
 \begin{enumerate}
     \item \texttt{El método toma una cadena, \textit{"filepath"}, esta cadena se refiere a la ubicación del mapa en el sistema de archivos del ordenador, es decir, la ruta del archivo}
     \item \texttt{InputStream is = getClass().getResourceAsStream(filepath); BufferedReader br = \\
-    new BufferedReader(new InputStreamReader(is)); 
-    esta parte del codigo lo que hace es crear un BufferReader que lee el archivo del mapa.}
+              new BufferedReader(new InputStreamReader(is));
+              esta parte del codigo lo que hace es crear un BufferReader que lee el archivo del mapa.}
     \item \texttt{"getClass().getResourceAsStream(filepath)" lo que hace es localizar el archivo en el sistema.}
     \item \texttt{Las variables \textit{row} y \textit{col} nos sirven para saber en que posición del mapa se encuentra.}
     \item \texttt{"while (col < gp.maxWorldCol \&\& row < gp.maxWorldRow)" el bucle continua mientras no se llegue al final del mapa}
@@ -649,15 +653,32 @@ En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este acto
 
 \begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU1-Empezar juego} \\
+        \textbf{Apartados}     & \textbf{CU1-Empezar juego}                                                                                                             \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones         & El programa debe estar en ejecución                                                                                                    \\
         \hline
-        Descripción              & El jugador selecciona en la pantalla del menú principal la opción de crear una partida nueva, lo que provoca la creación de un nuevo archivo de guardado \\
+        Postcondiciones        & El programa cambiará al estado de \textit{playstate} lo que provocará el cambio de interfaz gráfica                                    \\
         \hline
-        Frecuencia de uso        & Baja \\
+        Actor                  & Jugador                                                                                                                                \\
+        \hline
+        Descripción            & El jugador:
+        \begin{enumerate}
+            \item Mediante el movimiento del cursor con las teclas \textbf{W} y \textbf{S}, el actor colocará el cursor en la posición deseada
+            \item Presionará la tecla \textbf{ENTER}, la cual aceptará la opción escogida, en este caso \textbf{Nuevo juego}
+            \item El programa entrará en el \textit{playstate}
+            \item Empezará el juego
+        \end{enumerate}                               \\
+        \hline
+        Escenarios secundarios & \textbf{Escenario alternativo 1:}
+        \begin{itemize}
+            \item El jugador, estando en la pantalla de menú principal después de haber vuelto a la misma desde el menú de opciones del programa.
+            \item Presiona de nuevo la tecla \textbf{ENTER} sobre la misma opción.
+            \item[\faAngleRight] Provocaría la vuelta al \textit{playstate} y que los objetos vuelvan a estar donde estaban, así como npcs, enemigos y posición del jugador.
+        \end{itemize} \\
+        \hline
+        Frecuencia de uso      & Baja                                                                                                                                   \\
         \hline
     \end{tabular}
     \caption{Caso de uso 1 - Empezar juego}
@@ -666,15 +687,32 @@ En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este acto
 
 \begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU2-Salir del juego} \\
+        \textbf{Apartados}     & \textbf{CU2-Salir del juego}                                                                                \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones         & El programa debe estar en funcionamiento                                                                    \\
         \hline
-        Descripción              & El jugador selecciona en la pantalla del menú principal la opción de salir del juego, lo que provoca parada del programa \\
+        Postcondiciones        & El programa, pararía su ejecución                                                                           \\
         \hline
-        Frecuencia de uso        & Baja \\
+        Actor                  & Jugador                                                                                                     \\
+        \hline
+        Descripción            & El jugador:
+        \begin{itemize}
+            \item Mediante el movimiento del cursor con las teclas \textbf{W} y \textbf{S}, el actor colocará el cursor en la posición deseada
+            \item Presionará la tecla \textbf{ENTER}, la cual aceptará la opción escogida, en este caso \textbf{Salir}
+            \item El programa terminaría su ejecución
+            \item Se cerraría automáticamente
+        \end{itemize}    \\
+        \hline
+        Escenarios secundarios & \textbf{Escenario alternativo 1:}
+        \begin{itemize}
+            \item El jugador, estando en la pantalla de menú principal después de haber vuelto a la misma desde el menú de opciones del programa.
+            \item Presiona de nuevo la tecla \textbf{ENTER} sobre la misma opción.
+            \item[\faAngleRight] Provocaría la parada de la ejecución del programa.
+        \end{itemize} \\
+        \hline
+        Frecuencia de uso      & Baja                                                                                                        \\
         \hline
     \end{tabular}
     \caption{Caso de uso 2 - Salir del juego}
@@ -683,15 +721,31 @@ En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este acto
 
 \begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU3-Mover personaje} \\
+        \textbf{Apartados}     & \textbf{CU3-Mover personaje}                                                                 \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones         & El programa debe estar en \textit{playstate}, es decir \textbf{CU1}                          \\
         \hline
-        Descripción              & El jugador por medio de las teclas mueve el personaje en pantalla en cualquiera de las 4 direcciones dentro del CU1 \\
+        Postcondiciones        & El programa cambiará la posición \textbf{X} o \textit{Y} del personaje con una animación     \\
         \hline
-        Frecuencia de uso        & Alta \\
+        Actor                  & Jugador                                                                                      \\
+        \hline
+        Descripción            & El jugador:
+        \begin{itemize}
+            \item Mediante las teclas \textbf{W,A,S,D}, presionará, una de ellas.
+            \item Dependiendo de la tecla, el personaje del juego, se moverá en pantalla hacia 1 de las 4 direcciones posibles
+            \item El personaje se moverá tanto tiempo como esté presionada la tecla elegida.
+            \item El personaje parará su movimiento cuando se deje de presionar la tecla.
+        \end{itemize}     \\
+        \hline
+        Escenarios secundarios & \textbf{Escenario alternativo 1:}
+        \begin{itemize}
+            \item El jugador colisiona contra un objeto, casilla y/o NPC.
+            \item[\faAngleRight] Si el jugador avanza en la dirección de esta casilla, objeto o NPC, no se producirá el movimiento
+        \end{itemize} \\
+        \hline
+        Frecuencia de uso      & Alta                                                                                         \\
         \hline
     \end{tabular}
     \caption{Caso de uso 3 - Mover personaje}
@@ -700,15 +754,42 @@ En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este acto
 
 \begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU4-Combatir} \\
+        \textbf{Apartados}     & \textbf{CU4-Combatir}                                                                                \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones         & El jugador se encuentra en el \textbf{CU1} previamente.                                              \\
         \hline
-        Descripción              & El jugador dentro del CU1, y realizando el CU3, puede combatir contra enemigos \\
+        Postcondiciones        & El jugador resta puntos de salud al enemigo.                                                         \\
         \hline
-        Frecuencia de uso        & Media \\
+        Actor                  & Jugador                                                                                              \\
+        \hline
+        Descripción            & El jugador:
+        \begin{itemize}
+            \item Econtrándose en el \textbf{CU1}
+            \item Haciendo uso del \textbf{CU3}
+            \item Se encuentra con un \textit{enemigo}
+            \item[\faAngleRight] Puede combatir
+            \item Le restará puntos de salud al \textit{enemigo} con un ataque en caso de acierto
+            \item El \textit{enemigo}, tendrá un tiempo en el que será invulnerable
+            \item Esos puntos de salud se verán representados por una barra de puntos de salud que se colocará encima del \textit{enemigo}
+            \item[\faAngleRight] Cuando los puntos de salud llegan a cero o menos de cero puntos, el \textit{enemigo}, desaparece
+        \end{itemize} \\
+        \hline
+        Escenarios secundarios & \textbf{Escenario alternativo 1:}
+        \begin{itemize}
+            \item El jugador colisiona contra el enemigo.
+            \item[\faAngleRight] Si el jugador colisiona contra el enemigo, perderá puntos de salud
+            \item El jugador además si es dañado, tendrá un tiempo en el cual será invulnerable
+        \end{itemize}
+        \textbf{Escenario alternativo 2:}
+        \begin{itemize}
+            \item El jugador pierde todos sus puntos de salud
+            \item Esto provocaría el \textbf{CU5}
+            \item El programa estaría en el \textit{gameoverstate}
+        \end{itemize}                                                                         \\
+        \hline
+        Frecuencia de uso      & Media                                                                                                \\
         \hline
     \end{tabular}
     \caption{Caso de uso 4 - Combatir}
@@ -717,15 +798,40 @@ En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este acto
 
 \begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU5-Morir} \\
+        \textbf{Apartados}     & \textbf{CU5-Morir}                                                                                              \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones         & El jugador ha recibido daño o ha experimentado algo que haya restado sus puntos de salud a cero o menos de cero \\
         \hline
-        Descripción              & El jugador durante el CU1, y realizando el CU3 al llegar su vida a cero, muere, provocando este caso de uso \\
+        Postcondiciones        & El programa pasa a \textit{gameoverstate}, además aparecerá la interfaz gráfica de la pantalla de fin de juego  \\
         \hline
-        Frecuencia de uso        & Baja \\
+        Actor                  & Jugador                                                                                                         \\
+        \hline
+        Descripción            & El jugador:
+        \begin{itemize}
+            \item Dentro del \textbf{CU1}
+            \item Ve mermados sus puntos de salud a cero o menos de cero
+            \item[\faAngleRight] Provoca su muerte
+            \item[\faAngleRight] Aparece una pantalla de fin de juego con dos opciones
+            \item Puede elegir si volver a intentarlo o salir, mediante las teclas \textbf{W} y \textbf{S}
+            \item El jugador seleccionaría una opción con la tecla \textbf{ENTER}
+        \end{itemize}                                            \\
+        \hline
+        Escenarios secundarios & \textbf{Escenario alternativo 1:}
+        \begin{itemize}
+            \item El jugador ha escogido la opción de volver a intentarlo o \textit{retry}
+            \item Devuelve el personaje a su posición inicial
+            \item También a los enemigos, NPCs y objetos
+        \end{itemize}
+        \textbf{Escenario alternativo 2:}
+        \begin{itemize}
+            \item El jugador selecciona la opción de salir
+            \item Devuelve al jugador a la pantalla de menú principal
+            \item Cambia el estado del programa a \textit{TitleScreenstate}
+        \end{itemize}                                                                           \\
+        \hline
+        Frecuencia de uso      & Baja                                                                                                            \\
         \hline
     \end{tabular}
     \caption{Caso de uso 5 - Morir}
@@ -734,83 +840,158 @@ En el diagrama de casos de uso, tenemos un actor que seria el jugador. Este acto
 
 \begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU6-Pausar el juego} \\
+        \textbf{Apartados} & \textbf{CU6-Pausar el juego}                                                     \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones     & Debemos estar en el \textbf{CU1}                                                 \\
         \hline
-        Descripción              & El jugador durante el CU1, presiona la tecla \textit{P} y saca el menú de pausa y provoca también el CU7 \\
+        Postcondiciones    & El programa pasa a estar en estado \textit{pauseState} y provoca el \textbf{CU7} \\
         \hline
-        Frecuencia de uso        & Alta \\
+        Actor              & Jugador                                                                          \\
+        \hline
+        Descripción        & El jugador:
+        \begin{itemize}
+            \item Dentro del \textbf{CU1}
+            \item El jugador presiona la tecla \textbf{P}
+            \item El programa esta en \textit{pauseState}
+            \item[\faAngleRight] Se abre una ventana emergente dentro del programa, el menú de pausa
+            \item[\faAngleRight] Provoca el \textbf{CU7}
+            \item[\faAngleRight] Lista objetos directamente de la base de datos
+            \item Si el jugador presiona de nuevo la tecla \textbf{P}, volvería de nuevo al \textit{gamestate}
+        \end{itemize}     \\
+        \hline
+        Frecuencia de uso  & Alta                                                                             \\
         \hline
     \end{tabular}
     \caption{Caso de uso 6 - Pausar el juego}
     \label{tab:casosdeuso6-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU7-Leer la base de datos} \\
+        \textbf{Apartados}     & \textbf{CU7-Leer la base de datos}                                           \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones         & Estar conectado a la base de datos y estar en el \textbf{CU6}                \\
         \hline
-        Descripción              & El jugador despues de realizar el CU6 leería datos acerca de varios objetos de la base de datos \\
+        Postcondiciones        & Realiza la lectura de datos sobre la base de datos y la muestra en pantalla  \\
         \hline
-        Frecuencia de uso        & Alta \\
+        Actor                  & Jugador                                                                      \\
+        \hline
+        Descripción            & El jugador:
+        \begin{itemize}
+            \item Estando en el \textbf{CU6}
+            \item[\faAngleRight] Se muestra por pantalla un listado de objetos guardados en la base de datos
+        \end{itemize}       \\
+        \hline
+        Escenarios secundarios & \textbf{Escenario alternativo 1:}
+        \begin{itemize}
+            \item El programa no es capaz de conectarse a la base de datos
+            \item El programa por la consola, lanzará un mensaje de que no ha podido conectarse a la base de datos
+            \item No parará la ejecución del mismo, y no mostrará el listado de objetos
+        \end{itemize} \\
+        \hline
+        Frecuencia de uso      & Alta                                                                         \\
         \hline
     \end{tabular}
     \caption{Caso de uso 7 - Leer de la base de datos}
     \label{tab:casosdeuso7-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU8-Obtener Objetos} \\
+        \textbf{Apartados} & \textbf{CU8-Obtener Objetos}                        \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones     & Estar en el \textbf{CU1} y realizar el \textbf{CU3} \\
         \hline
-        Descripción              & El jugador durante el CU1 y el CU3, puede obtener objetos que estén repartidos por el mundo \\
+        Postcondiciones    & Se añade el objeto al inventario del personaje      \\
         \hline
-        Frecuencia de uso        & Media \\
+        Actor              & Jugador                                             \\
+        \hline
+        Descripción        & El jugador:
+        \begin{itemize}
+            \item Dentro del \textbf{CU1}
+            \item Colisiona con un objeto al realizar el \textbf{CU3}
+            \item El objeto desaparece
+            \item Aparece un mensaje en la parte izquierda de la pantalla
+            \item[\faAngleRight] Indica la obtención del objeto
+            \item[\faAngleRight] El objeto es añadido al inventario del personaje
+        \end{itemize}    \\
+        \hline
+        Frecuencia de uso  & Media                                               \\
         \hline
     \end{tabular}
     \caption{Caso de uso 8 - Obtener objetos}
     \label{tab:casosdeuso8-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU9-Interactuar} \\
+        \textbf{Apartados}     & \textbf{CU9-Interactuar}                                                    \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones         & El jugador debe presionar la tecla \textbf{ENTER} tocando el NPC            \\
         \hline
-        Descripción              & El jugador estando en el CU1 y CU3, puede hablar con un actor, el \textit{NPC} \\
+        Postcondiciones        & El programa pasa a estar en estado de \textit{dialogueState}                \\
         \hline
-        Frecuencia de uso        & Media \\
+        Actor                  & Jugador                                                                     \\
+        \hline
+        Descripción            & El jugador:
+        \begin{itemize}
+            \item Dentro del \textbf{CU1}
+            \item Tocando el NPC
+            \item Presiona la tecla \textbf{ENTER}
+            \item[\faAngleRight] Se muestra un cuadro de dialogo en la parte superior de la pantalla
+            \item[\faAngleRight] El programa estando en \textit{dialogueState} mantiene el resto del mundo parado
+            \item Debe presionar \textbf{ENTER} para volver al \textit{playstate}
+        \end{itemize} \\
+        \hline
+        Escenarios secundarios & \textbf{Escenario alternativo 1:}
+        \begin{itemize}
+            \item El jugador puede interactuar con ciertas casillas especiales
+            \item Al interactuar con ellas se vuelve al \textit{dialogueState}
+            \item Esta vez, esta interacción proporciona algo más que un dialogo
+            \item El \textit{Healing pool Event} puede ser activado con este caso de uso
+            \item Provocaría la recuperación de puntos de salud del personaje
+        \end{itemize}                          \\
+        \hline
+        Frecuencia de uso      & Media                                                                       \\
         \hline
     \end{tabular}
     \caption{Caso de uso 9 - Interactuar}
     \label{tab:casosdeuso9-table}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[!ht]
     \centering
-    \begin{tabular}{|c|p{12cm}|} 
+    \begin{tabular}{|c|p{12cm}|}
         \hline
-        \textbf{Apartados}       & \textbf{CU10-Ver estado} \\
+        \textbf{Apartados} & \textbf{CU10-Ver estado}                                                                      \\
         \hline
-        Actor                    & Jugador \\
+        Precondiciones     & El jugador debe estar en el \textbf{CU1} y presionar la tecla \textbf{C}                      \\
         \hline
-        Descripción              & El jugador estando en el CU1 y apretando la tecla \textit{C}, abriría la pantalla de estado que muestra estadísticas del personaje\\
+        Postcondiciones    & El jugador verá en la pantalla del programa una nueva interfaz gráfica con datos de interés   \\
         \hline
-        Frecuencia de uso        & Media \\
+        Actor              & Jugador                                                                                       \\
+        \hline
+        Descripción        & El jugador:
+        \begin{itemize}
+            \item Estando en el \textbf{CU1}
+            \item Presionará la tecla \textbf{C}
+            \item[\faAngleRight] Provocará la aparición de una nueva interfaz gráfica con datos de interés acerca del personaje
+            \item[\faAngleRight] Cambiará el estado del programa a \textit{statusState}
+            \item[\faAngleRight] Podrá seleccionar otra arma dentro de su inventario
+            \item[\faAngleRight] Moverá el cursor del inventario con las teclas \textbf{W,A,S,D}
+            \item[\faAngleRight] Seleccionará el arma elegida con la tecla \textbf{ENTER}
+            \item Cerrará esta interfaz con la tecla \textbf{C}
+        \end{itemize} \\
+        \hline
+        Frecuencia de uso  & Media                                                                                         \\
         \hline
     \end{tabular}
     \caption{Caso de uso 10 - Ver estado}
@@ -860,7 +1041,7 @@ Por otro lado, dentro de esta pantalla también observamos los corazones de vida
 \end{figure}
 Esta sería la pantalla referente al inventario, de la que hemos hablado anteriormente, en esta pantalla, lo que tenemos son varios cuadros que nos otorgan informacion sobre el personaje, esta pantalla la podemos dividir en 3 partes,
 la primera parte es la del panel izquierdo que nos habla de las estadísticas, no tiene mucho misterio, simplemente nos muestra las estadísticas del jugador y una imagen del arma actual y el escudo o pergamino actual, el segundo panel sería el inventario en si, que es el panel derecho grande,
-este panel cuenta con un cursor y un dato curioso, los objetos que sean armas, una vez seleccionados, cambia el fondo del inventario a un color amarillo, como se ve en la imagen, este panel es navegable, es decir, podemos seleccionar objetos con el cursor que vemos en pantalla. Por último tenemos el panel de descripción, 
+este panel cuenta con un cursor y un dato curioso, los objetos que sean armas, una vez seleccionados, cambia el fondo del inventario a un color amarillo, como se ve en la imagen, este panel es navegable, es decir, podemos seleccionar objetos con el cursor que vemos en pantalla. Por último tenemos el panel de descripción,
 se trata del panel derecho que se encuentra en la posición más baja, este panel se ocupa de mostrar un breve texto a modo de descripción acerca del objeto sobre el que el cursor está encima.\\
 \begin{figure}[!ht]
     \centering
@@ -1062,7 +1243,7 @@ varias instancias de g2, es decir del objeto de Graphics2D, esto es debido a que
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Fullscrennmode.PNG}
     \caption{¿Cómo dibuja el programa la pantalla completa?}
-    \label{fig:fullscreen}
+    \label{fig:fullscreenmode}
 \end{figure}
 Esto es importante tenerlo en cuenta ya que después de ser dibujado el juego, necesita ser escalado a la resolución de nuestro monitor, en las primeras fases del desarrollo, se realizó el juego en un formato de 4:3,
 formato clásico de monitores más bien modestos o antiguos, según se implementó la función de pantalla completa, se ha tenido que cambiar lo que se conoce como \textit{aspect ratio} a uno más actual y más usado, como puede
@@ -1134,7 +1315,7 @@ Como vemos este método tiene varias partes y estados haciendo referencia al \te
         }
     }
 \end{lstlisting}
-Como vemos en este código, gracias a la clase \textbf{KeyEvent} de \textit{ava.awt.event.KeyEvent}, podemos reconocer la tecla pulsada con un determinado código que recibimos del input del usuario por el teclado. Esto, 
+Como vemos en este código, gracias a la clase \textbf{KeyEvent} de \textit{ava.awt.event.KeyEvent}, podemos reconocer la tecla pulsada con un determinado código que recibimos del input del usuario por el teclado. Esto,
 nos facilita la creación de la lógica de su movimiento, y más interacciones con el juego, debido a que cada tecla contiene un codigo que podemos poner en un switch como se ve en el código para poder mover el personaje.
 Esta clase también nos sirve como hemos visto en el primer código, para poder usar otras teclas, pausar el juego, interactuar con un npc, atacar, etc \dots \\
 Otro código interesante sería el que se encarga de dibujar los cuadros de dialogo.
@@ -1162,7 +1343,7 @@ Primero inicializamos variables, en este caso la x y la y, las cuales tienen los
 drawletters se encarga de dibujar las letras en el cuadro del dialogo, y se configura la fuente para esas letras antes de ser dibujadas, en este caso hemos usado un tamaño de 26 puntos. En cuanto al dialogo en sí, incrementamos x e y en la mitad del tamaño de la casilla, dibujamos el contenido del dialogo en las posiciones x,y, realizamos un bucle para recorrer el dialogo, con el que dividimos las nuevas
 lineas con el caracter especial. Para cada linea dibujamos en las posiciones determinadas y luego aumentamos la y, en 40 unidades para añadir un pequeño interlineado. \\
 
-Una clase bastante extensa tambien sería la clase \textit{Player}, dentro de esta clase encontramos método útiles para la gestión del jugador dentro del juego, animaciones de atacar o posicionamiento de ciertos sprites. El método que vamos a analizar, es el método correspondiente a 
+Una clase bastante extensa tambien sería la clase \textit{Player}, dentro de esta clase encontramos método útiles para la gestión del jugador dentro del juego, animaciones de atacar o posicionamiento de ciertos sprites. El método que vamos a analizar, es el método correspondiente a
 el ataque del jugador, en este caso el código sería de la siguiente manera:
 \begin{lstlisting}
     private void attacking() {
@@ -1254,7 +1435,7 @@ Un ejemplo de uso, seria por ejemplo:
 \begin{lstlisting}
     setup(0,"001",false);
 \end{lstlisting}
-Como vemos en esta llamada a setup, el metodo que hemos visto, el primer parámetro seria el index, es decir, recordemos que el mapa del juego no dejan de ser números, números que en verdad, representan casillas, estas casillas estan formadas por imagenes, 
+Como vemos en esta llamada a setup, el metodo que hemos visto, el primer parámetro seria el index, es decir, recordemos que el mapa del juego no dejan de ser números, números que en verdad, representan casillas, estas casillas estan formadas por imagenes,
 cada número del mapa, sería el index, que buscará el método setup, el segundo parámetro sería el nombre de la imagen que buscará el método, y por último, tenemos si es colisionable o no.
 \clearpage
 % ------------------------------------
@@ -1522,8 +1703,14 @@ Este método se llama en el menú de pausa:
 \end{lstlisting}
 Como vemos, se llama en este método encargado de dibujar el menú de pausa, la idea principal de este método ha sido tener en el menú de pausa un listado de objetos importantes u objetos clave, para que el jugador pueda consultar que objetos debe buscar en el
 juego para completar la aventura, hemos añadido las existencias y el precio, en caso de que el jugador tenga que comprar el objeto en una futura tienda o encontrar varios en caso de que existan varios del mismo tipo.
-En el desarrollo hemos dejado varios objetos de ejemplo aunque, se podrían poner otros, como llaves por ejemplo, también se puede hacer que en vez de un listado sin más, aparezcan imágenes de los objetos a conseguir, y que exista una capa de opacidad negra en caso de no tenerlos obtenidos, 
+En el desarrollo hemos dejado varios objetos de ejemplo aunque, se podrían poner otros, como llaves por ejemplo, también se puede hacer que en vez de un listado sin más, aparezcan imágenes de los objetos a conseguir, y que exista una capa de opacidad negra en caso de no tenerlos obtenidos,
 y que esta capa, se quite en función de si los hemos obtenido o no. Para esto habría que añadir otro atributo más a la base de datos que se llame \textit{Obtención}, por ejemplo.\\
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/diagramabasededatoscomo.PNG}
+    \caption{Imagen de como se leen los datos de la base de datos}
+    \label{fig:diagramaBasededatosC}
+\end{figure}
 \clearpage
 % ------------------------------------
 Uno de los últimos métodos que merece la pena observar, es el método de checkear el volumen.
@@ -1542,7 +1729,7 @@ Uno de los últimos métodos que merece la pena observar, es el método de check
 \end{lstlisting}
 Este método sigue la ecuación clásica de los decibelios:\\
 \[
-\text{dB} = 20 \log_{10} \left( \frac{P}{P_0} \right)
+    \text{dB} = 20 \log_{10} \left( \frac{P}{P_0} \right)
 \]
 
 \text{Donde}:
@@ -1559,6 +1746,72 @@ Y este método se encargaría de realizar un checkeo al volumen, y ponerlo media
 \end{flushright}
 \clearpage
 % ------------------------------------
+\subsection{Base de datos}
+Para la base de datos hemos optado por usar una sola tabla para listar los objectos que detallaremos a continuación, esta tabla contendría todos los datos de interés que necesitamos para el listado de objetos.\\
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.3\textwidth]{Images/entidadRelacionBaseDeDatos.PNG}
+    \caption{Imagen del diagrama de base de datos}
+    \label{fig:diagramaBasededatos}
+\end{figure}
+Los atributos de la tabla son:
+\begin{itemize}
+    \item Id
+          Necesario para poder buscar en concreto algún objeto en concreto dentro de la base de datos
+    \item Name o Nombre
+          Con este atributo ponemos un nombre medianamente descriptivo al objeto para que pueda ser reconocible por el jugador
+    \item Precio
+          Este atributo esta pensado para una versión futura del programa o propuesta de mejora, que sería el añadido del mercado, tener un precio en un juego donde existe el mercado, es importante ya que nos permite pensar si debemos vender o comprar el objeto.
+    \item Existencias
+          Otro dato pensado en una versión futura, ya que se podría realizar esta lista de forma interactiva con el juego, es decir al coger una existencia del listado de objetos, se podría eliminar una existencia del mismo.
+\end{itemize}
+Para poder realizar las dos últimas funcionalidades descritas en los atributos de la base de datos, habría que ampliar un poco más la base de datos y deberíamos quizás añadir algún atributo más. En el caso del precio,
+no deberíamos añadir nada más ya que el mercader, leería directamente de la base de datos, lo único que necesitaríamos es que el jugador pueda realizar updates a la base de datos, ya que al comprar es lo que estaría haciendo, al vender no sería necesario, pues
+por el momento no guardamos datos del jugador en la base de datos, en caso de tener una tabla que siga el progreso del jugador, si deberíamos realizar más operaciones en la base de datos.\\
+Esto a futuro generaría un dilema, el cual es, qué usuario debería manipular la base de datos, ¿el usuario root?, No, para esto una idea que se me ocurre es crear otra tabla más, en este caso de usuarios y contraseñas, en esta tabla instaremos al usuario a registrarse según inicie el juego, mediante un sistema de login,
+al realizar login, el usuario en su primera vez estaría creando en la base de datos un nuevo usuario, este nuevo usuario tendría permisos de update, select y delete, no necesita muchos más permisos, ya que solo queremos que lea de de la base de datos y manipule algún dato, darle más permisos podría provocar vulnerabilidades.
+\clearpage
+% ------------------------------------
+\section{Fase de pruebas}
+\subsection{Pruebas Unitarias}
+\subsection{Entorno de pruebas}
+\subsection{Rendimiento}
+Para el rendimiento de la aplicación hemos usado un equipo con las siguientes características:
+\begin{table}[htbp]
+    \centering
+    \caption{Especificaciones del equipo}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Componente} & \textbf{Detalle}                     \\
+        \hline
+        Placa base          & Gigabyte                             \\
+        Procesador          & Intel Core i5 10600KF                \\
+        GPU                 & NVIDIA GeForce RTX 3060 Ti OC VISION \\
+        RAM                 & 32GB Kingston Fury                   \\
+        Disco 1             & SSD 1TB M.2  NvME Kingston           \\
+        Disco 2             & SSD 1TB 2.5 pulgadas                 \\
+        Sistema Operativo   & Windows 11                           \\
+        JDK                 & JDK 21                               \\
+        \hline
+    \end{tabular}
+    \label{tab:equipo}
+\end{table}
+Las pruebas de rendimiento con este equipo no salieron favorables, es decir, mientras que el programa funcionaba perfectamente sin estar en pantalla completa, al ejecutar el programa en pantalla completa hemos determinado:\\
+\begin{equation}
+    \text{Porcentaje de caída de rendimiento} = \left( \frac{\text{FPS en ventana} - \text{FPS en pantalla completa}}{\text{FPS en ventana}} \right) \times 100
+\end{equation}
+
+\begin{equation}
+    \left(\frac{60 - 50}{60}\right)\times 100 = \left( \frac{10}{60} \right) \times 100 = \frac{1}{6} \times 100 \approx 16.67 \%
+\end{equation}
+
+Como vemos el rendimiento cae un 16 \%, esto es algo a tener en cuenta y se puede estar produciendo por diferentes factores, el más obvio es que gráficamente no este utilizando el juego la tarjeta gráfica, ya que esta tarjeta es bastante potente para la tarea gráfica de este juego.
+Aparte también creemos que puede estar relacionado con el buffer de swing, por lo que esto quizá se puede arreglar doblando el tamaño del buffer. Otra idea que puede ayudar al rendimiento, puede ser la de optimizar código. Dentro
+de este proyecto contamos con cientos de líneas de código, las cuales, en su mayoría suponemos que pueden optimizarse.
+
+
+\clearpage
+% ------------------------------------
 \section{Propuestas de mejora y trabajos futuros}
 Dentro de esta sección vamos a nombrar ciertos apartados que se podrían añadir en una versión futura de la aplicación, y de paso, explicaremos alguna en detalle.\\
 \textbf{Objetos rompibles}: empezamos con un clásico dentro de los videojuegos y son los objetos que se pueden romper, por ejemplo vasijas que oculten dinero, corazones, u otros objetos interesantes.\\
@@ -1568,9 +1821,9 @@ Dentro de esta sección vamos a nombrar ciertos apartados que se podrían añadi
 \textbf{Misiones}: Un útlimo aspecto que podríamos meter, puede ser un sistema de misiones, en las cuales tengamos varios tipos de misiones, por ejemplo:
 \begin{itemize}
     \item Misiones principales
-    Misiones en las cuales se avanza en la historia principal del juego, necesarias para poder acabar el juego.
+          Misiones en las cuales se avanza en la historia principal del juego, necesarias para poder acabar el juego.
     \item Misiones secundarias
-    Misiones en las que no se avanza en la historia principal, pero se hacen misiones bien más fáciles o bien más difíciles que las principales, que tengan una recompensa mayor o menor en función de la dificultad, esto nos permitiría añadir incluso mapas nuevos, enemigos opcionales y jefes opcionales incluso, así como armas secretas.
+          Misiones en las que no se avanza en la historia principal, pero se hacen misiones bien más fáciles o bien más difíciles que las principales, que tengan una recompensa mayor o menor en función de la dificultad, esto nos permitiría añadir incluso mapas nuevos, enemigos opcionales y jefes opcionales incluso, así como armas secretas.
 \end{itemize}
 \textbf{Centralización de la base de datos}: Se detallará más abajo en un pequeño apartado, pero se podría centralizar la base de datos en un servidor central o ubicado por paises como el caso de los videojuegos actuales.
 \textbf{Mercado}: Aunque se ha tratado de implementar una función de mercado o tradeo con un npc, no ha podido ser implementada sin errores a tiempo, por lo que queda como propuesta de mejora, ya que es una opción interesante, típica en videojuegos de este estilo, además serviría para que el jugador, pueda recuperar vida de otra manera.
@@ -1623,12 +1876,12 @@ Es por ello que \textbf{otra propuesta de mejora} sería centralizar la base de 
     \centering
     \includegraphics[width=0.8\textwidth]{Images/itemblackdesert.png}
     \caption{Imagen de Black Desert Online, item en venta}
-    \label{fig:fullscreen}
+    \label{fig:blackdesertfigure}
 \end{figure}
 \clearpage
 % ------------------------------------
 \section{Repositorios del Proyecto}
-Este TFG, se divide en dos repositorios, uno que contiene el código de la aplicación y otro que contiene la documentación del mismo, adjuntamos foto de ambos.
+Este proyecto, se divide en dos repositorios, uno que contiene el código de la aplicación y otro que contiene la documentación del mismo, adjuntamos foto de ambos.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/codigorepo.png}
@@ -1668,7 +1921,7 @@ Vamos a enseñar brevemente el readme de ambos repositorios, cabe destacar que n
     \item \textbf{\href{https://excalidraw.com/}{Excalidraw}}
     \item \textbf{\href{https://manualdelatex.com/}{Manual de LaTex}}
     \item \textbf{\href{https://mermaid.js.org/intro/getting-started.html}{Mermaid}}
-    \item \textbf{\href{https://www.jetbrains.com/es-es/idea/}{IntelliJ}} 
+    \item \textbf{\href{https://www.jetbrains.com/es-es/idea/}{IntelliJ}}
     \item \textbf{\href{https://www.piskelapp.com/}{Editor Pixel art}}
     \item \textbf{\href{https://tips.clip-studio.com/es-es/articles/2484}{Como hacer Assets}}
     \item \textbf{TFG de la Escuela de Segovia} - \url{https://uvadoc.uva.es/bitstream/handle/10324/24495/TFG-B%201042.pdf?sequence=1}
@@ -1687,6 +1940,7 @@ Vamos a enseñar brevemente el readme de ambos repositorios, cabe destacar que n
     \item \textbf{Web para hacer Diagramas de casos de uso online} - \url{https://online.visual-paradigm.com/drive/#infoart:proj=0&dashboard}
     \item \textbf{Landing on Blasphemous - Documental} - \url{https://youtu.be/lk--if_7J9g?si=kpGDZ2x66cMYwh1K}
     \item \textbf{Libro Configuración de infraestructuras de sistemas de telecomunicaciones} - ISBN 978-84-9732-934-7
+    \item \textbf{Overleaf} - \url{https://es.overleaf.com/}
 \end{itemize}
 
 \clearpage
@@ -1716,108 +1970,108 @@ Vamos a enseñar brevemente el readme de ambos repositorios, cabe destacar que n
     Vamos a ver que assets principales que hemos usado para este tfg en cuanto a este paquete se refiere:
     \begin{itemize}
         \item Ninja rojo - Personaje principal
-        \begin{figure}[ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/FacesetPlayer.png}
-            \caption{Imagen del protagonista}
-            \label{fig:player}
-        \end{figure}
-        \begin{itemize}
-            \item Este sería el personaje principal de la avenutra, el \textit{Ninja rojo}, el cual sería en si el jugador también ya que es el personaje que controlamos con el teclado. Además este
-            personaje cuenta con un arma, la \textit{Katana}, la cual incialmente lleva equipada incialmente.
-        \end{itemize}
+              \begin{figure}[ht]
+                  \centering
+                  \includegraphics[width=0.1\textwidth]{Images/FacesetPlayer.png}
+                  \caption{Imagen del protagonista}
+                  \label{fig:player}
+              \end{figure}
+              \begin{itemize}
+                  \item Este sería el personaje principal de la avenutra, el \textit{Ninja rojo}, el cual sería en si el jugador también ya que es el personaje que controlamos con el teclado. Además este
+                        personaje cuenta con un arma, la \textit{Katana}, la cual incialmente lleva equipada incialmente.
+              \end{itemize}
         \item Cyclope - Enemigo
-        \begin{figure}[ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/monster1.png}
-            \caption{Imagen del cíclope}
-            \label{fig:ciclope}
-        \end{figure}
-        \begin{itemize}
-            \item El enemigo principal del juego, es el enemigo contra el que generalmente lucharemos a lo largo de la aventura.
-        \end{itemize}
+              \begin{figure}[ht]
+                  \centering
+                  \includegraphics[width=0.1\textwidth]{Images/monster1.png}
+                  \caption{Imagen del cíclope}
+                  \label{fig:ciclope}
+              \end{figure}
+              \begin{itemize}
+                  \item El enemigo principal del juego, es el enemigo contra el que generalmente lucharemos a lo largo de la aventura.
+              \end{itemize}
         \item Arboles Sakura
-        \begin{figure}[ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/arboles.png}
-            \caption{Imagen del árbol}
-            \label{fig:arbol}
-        \end{figure}
-        \begin{itemize}
-            \item Esta sería el asset para el árbol que adorna parte del mundo.
-        \end{itemize}
-        \clearpage
-        % ------------------------------------
+              \begin{figure}[ht]
+                  \centering
+                  \includegraphics[width=0.1\textwidth]{Images/arboles.png}
+                  \caption{Imagen del árbol}
+                  \label{fig:arbol}
+              \end{figure}
+              \begin{itemize}
+                  \item Esta sería el asset para el árbol que adorna parte del mundo.
+              \end{itemize}
+              \clearpage
+              % ------------------------------------
         \item Tiles - Casillas
-        \begin{figure}[ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/cesped1.png}
-            \caption{Imagen del césped}
-            \label{fig:cesped}
-        \end{figure}
-        \begin{itemize}
-            \item Este sería el césped usado, uno de los varios assets del juego.
-        \end{itemize}
-        \begin{figure}[ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/agua.png}
-            \caption{Imagen del agua}
-            \label{fig:agua}
-        \end{figure}
-        \begin{itemize}
-            \item Asset usado para el agua del juego.
-        \end{itemize}
-        \begin{figure}[ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/arena.png}
-            \caption{Imagen de arena o camino}
-            \label{fig:arena}
-        \end{figure}
-        \begin{itemize}
-            \item Asset usado para simular un camino dentro del mapa.
-        \end{itemize}
-        \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/rocas.png}
-            \caption{Imagen de las rocas}
-            \label{fig:rocas}
-        \end{figure}
-        \begin{itemize}
-            \item Asset usada para las rocas del mapa.
-        \end{itemize}
-        Y con esto acabarían los asset relativos a los tiles, es decir a las casillas del mapa, sobre el que se desarrollará el videojuego, cabe decir, que el 90\% de ellos vienen de un pack referenciado en la bibliografía.
-        \clearpage
-        % -----------------------------------
+              \begin{figure}[ht]
+                  \centering
+                  \includegraphics[width=0.1\textwidth]{Images/cesped1.png}
+                  \caption{Imagen del césped}
+                  \label{fig:cesped}
+              \end{figure}
+              \begin{itemize}
+                  \item Este sería el césped usado, uno de los varios assets del juego.
+              \end{itemize}
+              \begin{figure}[ht]
+                  \centering
+                  \includegraphics[width=0.1\textwidth]{Images/agua.png}
+                  \caption{Imagen del agua}
+                  \label{fig:agua}
+              \end{figure}
+              \begin{itemize}
+                  \item Asset usado para el agua del juego.
+              \end{itemize}
+              \begin{figure}[ht]
+                  \centering
+                  \includegraphics[width=0.1\textwidth]{Images/arena.png}
+                  \caption{Imagen de arena o camino}
+                  \label{fig:arena}
+              \end{figure}
+              \begin{itemize}
+                  \item Asset usado para simular un camino dentro del mapa.
+              \end{itemize}
+              \begin{figure}[!ht]
+                  \centering
+                  \includegraphics[width=0.1\textwidth]{Images/rocas.png}
+                  \caption{Imagen de las rocas}
+                  \label{fig:rocas}
+              \end{figure}
+              \begin{itemize}
+                  \item Asset usada para las rocas del mapa.
+              \end{itemize}
+              Y con esto acabarían los asset relativos a los tiles, es decir a las casillas del mapa, sobre el que se desarrollará el videojuego, cabe decir, que el 90\% de ellos vienen de un pack referenciado en la bibliografía.
+              \clearpage
+              % -----------------------------------
         \item Monje - NPC de la fase de pruebas
-        \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.1\textwidth]{Images/monje.png}
-            \caption{Imagen del monje}
-            \label{fig:monje}
-        \end{figure}
-        \begin{itemize}
-            \item El famoso npc llamado \textit{sabio}, este npc fue el que hemos usado durante el desarollo para probar dialogos e interacciones con el jugador.
-        \end{itemize}
+              \begin{figure}[!ht]
+                  \centering
+                  \includegraphics[width=0.1\textwidth]{Images/monje.png}
+                  \caption{Imagen del monje}
+                  \label{fig:monje}
+              \end{figure}
+              \begin{itemize}
+                  \item El famoso npc llamado \textit{sabio}, este npc fue el que hemos usado durante el desarollo para probar dialogos e interacciones con el jugador.
+              \end{itemize}
         \item Katana - Arma inicial
-        \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.05\textwidth]{Images/katana.png}
-            \caption{Imagen de la katana}
-            \label{fig:katana}
-        \end{figure}
-        \begin{itemize}
-            \item Arma principal del protagonista, con esta arma empieza el videojuego el protagonista.
-        \end{itemize}
+              \begin{figure}[!ht]
+                  \centering
+                  \includegraphics[width=0.05\textwidth]{Images/katana.png}
+                  \caption{Imagen de la katana}
+                  \label{fig:katana}
+              \end{figure}
+              \begin{itemize}
+                  \item Arma principal del protagonista, con esta arma empieza el videojuego el protagonista.
+              \end{itemize}
         \item Rapier - Arma avanzada
-        \begin{figure}[!ht]
-            \centering
-            \includegraphics[width=0.05\textwidth]{Images/rapier.png}
-            \caption{Imagen del estoque o rapier}
-            \label{fig:rapier}
-        \end{figure}
-        \begin{itemize}
-            \item Asset usado para el estoque o rapier, un arma más poderosa que la katana que inflinge algo más de daño.
-        \end{itemize}
+              \begin{figure}[!ht]
+                  \centering
+                  \includegraphics[width=0.05\textwidth]{Images/rapier.png}
+                  \caption{Imagen del estoque o rapier}
+                  \label{fig:rapier}
+              \end{figure}
+              \begin{itemize}
+                  \item Asset usado para el estoque o rapier, un arma más poderosa que la katana que inflinge algo más de daño.
+              \end{itemize}
     \end{itemize}
     \clearpage
     % ---------------------------------------
@@ -1845,7 +2099,7 @@ Vamos a enseñar brevemente el readme de ambos repositorios, cabe destacar que n
         \label{fig:Zelda}
     \end{figure}
 
-    Nótese también que esos videojuegos, salvo el último son videojuegos en 2 dimensiones que tienen una vista igual o similar a la presentada en Eldoria, es por ello que bebe mucho el TFG, de este tipo de fórmula que 
+    Nótese también que esos videojuegos, salvo el último son videojuegos en 2 dimensiones que tienen una vista igual o similar a la presentada en Eldoria, es por ello que bebe mucho el TFG, de este tipo de fórmula que
     a dia de hoy, juegos grandes siguen usando, sin ir más lejos, \textit{The legend of Zelda Tears of the Kingdom}, sigue la fórmula del primero juego, varias mazmorras, en las que el jugador se enfrenta a varios puzzles,
     antes de llegar al jefe final del juego, debe pasar por varias pruebas e incluso optar a conseguir un arma legendaria para hacerle frente.
 
