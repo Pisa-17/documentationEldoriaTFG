@@ -1774,7 +1774,124 @@ al realizar login, el usuario en su primera vez estaría creando en la base de d
 % ------------------------------------
 \section{Fase de pruebas}
 \subsection{Pruebas Unitarias}
+Para esta fase hemos probado dos métodos interesantes del programa, el método referente al sonido y otro método referente a dibujar por pantalla elementos.
+Las pruebas del codigo se han realizado con una clase llamada MainTest, que contiene el siguiente codigo: \\
+\begin{lstlisting}
+    @Test
+    public void testDrawToScreen() throws AWTException {
+
+        Robot robot = new Robot(); // Utilizamos Robot para simular eventos de teclado
+
+        
+        robot.keyPress(KeyEvent.VK_W);
+        robot.keyRelease(KeyEvent.VK_W);
+        robot.keyPress(KeyEvent.VK_S);
+        robot.keyRelease(KeyEvent.VK_S);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+        
+        try {
+            Thread.sleep(1000); 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        
+        JFrame frame = new JFrame();
+        frame.getContentPane().add(gamePanel); // Agregamos gamePanel al JFrame
+        frame.pack();
+        frame.setVisible(true);
+
+        
+        try {
+            gamePanel.drawToScreen();
+        } catch (Exception e) {
+            fail("Error al dibujar en la pantalla: " + e.getMessage());
+        } finally {
+            frame.dispose();
+        }
+    }
+
+    @Test
+    public void testPlayMusic() throws AWTException {
+        
+        gamePanel.playMusic(1);
+
+        
+        try {
+            Thread.sleep(2000); 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+       
+        assertTrue(gamePanel.musica.isMusicPlaying(), La musica no esta reproduciendose correctamente);
+
+        
+        try {
+            Thread.sleep(5000); 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+       
+        gamePanel.stopMusic();
+
+        
+        try {
+            Thread.sleep(1000); 
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        
+        assertFalse(gamePanel.musica.isMusicPlaying(), La musica no se detuvo correctamente);
+    }
+\end{lstlisting}
+Debido al tiempo que quedaba en la fase final del desarrollo no hemos podido realizar las pruebas unitarias que nos gustaría, con la calidad que nos gustaría también, por lo que al menos,
+hemos probado dos métodos que se suelen usar bastante a la hora del funcionamiento del programa.
 \subsection{Entorno de pruebas}
+Para el entorno de pruebas se ha usado dos equipos, uno de sobremesa y otro portatil, el equipo de sobremesa al ser mas potente lo hemos usado y probado mas a fondo ya que permite mas libertad: \\
+\begin{table}[!htbp]
+    \centering
+    \caption{Especificaciones del equipo de sobremesa}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Componente} & \textbf{Detalle}                     \\
+        \hline
+        Placa base          & Gigabyte                             \\
+        Procesador          & Intel Core i5 10600KF                \\
+        GPU                 & NVIDIA GeForce RTX 3060 Ti OC VISION \\
+        RAM                 & 32GB Kingston Fury                   \\
+        Disco 1             & SSD 1TB M.2  NvME Kingston           \\
+        Disco 2             & SSD 1TB 2.5 pulgadas                 \\
+        Sistema Operativo   & Windows 11                           \\
+        JDK                 & JDK 21                               \\
+        \hline
+    \end{tabular}
+    \label{tab:equipo1}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Especificaciones del equipo portatil}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Componente} & \textbf{Detalle}                     \\
+        \hline
+        Placa base          & HP                                   \\
+        Procesador          & Intel Core i7 11600KF                \\
+        GPU                 & INTEL HD Graphics                    \\
+        RAM                 & 16GB Crucial                         \\
+        Disco 1             & SSD 512GB NvME Crucial               \\
+        Sistema Operativo   & Windows 11                           \\
+        JDK                 & JDK 21                               \\
+        \hline
+    \end{tabular}
+    \label{tab:equipo2}
+\end{table}
+
 \subsection{Rendimiento}
 Para el rendimiento de la aplicación hemos usado un equipo con las siguientes características:
 \begin{table}[htbp]
@@ -1794,7 +1911,7 @@ Para el rendimiento de la aplicación hemos usado un equipo con las siguientes c
         JDK                 & JDK 21                               \\
         \hline
     \end{tabular}
-    \label{tab:equipo}
+    \label{tab:equipo3}
 \end{table}
 Las pruebas de rendimiento con este equipo no salieron favorables, es decir, mientras que el programa funcionaba perfectamente sin estar en pantalla completa, al ejecutar el programa en pantalla completa hemos determinado:\\
 \begin{equation}
