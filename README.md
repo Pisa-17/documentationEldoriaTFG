@@ -30,12 +30,16 @@ Este repositorio contiene la documentación LaTeX del Proyecto de Eldoria, un pr
 5. **Diseño Técnico:** Se describe la arquitectura física y lógica del proyecto, junto con un diagrama de clases y un diagrama de casos de uso.
 
 6. **Desarrollo Realizado:** Se presentan los detalles del código desarrollado, destacando los aspectos más relevantes del mismo.
+ 
+7. **Fase de pruebas:** Se presentan las pruebas unitarias del código y pruebas de rendimiento.
 
-7. **Propuestas de Mejora y Trabajos Futuros:** Se plantean posibles mejoras y líneas de trabajo futuras para el proyecto.
+8. **Propuestas de Mejora y Trabajos Futuros:** Se plantean posibles mejoras y líneas de trabajo futuras para el proyecto.
 
-8. **Bibliografía:** Se incluye la lista de referencias bibliográficas utilizadas durante la elaboración de la documentación.
+9. **Repositorios del proyecto:** Se comenta por encima parte de los repositorios.
 
-9. **Anexos:** Se adjuntan los anexos relevantes, como el manual de usuario, los assets utilizados y detalles adicionales sobre el arte e inspiraciones del juego.
+10. **Bibliografía:** Se incluye la lista de referencias bibliográficas utilizadas durante la elaboración de la documentación.
+
+11. **Anexos:** Se adjuntan los anexos relevantes, como el manual de usuario, los assets utilizados y detalles adicionales sobre el arte e inspiraciones del juego.
 
 ## Contribuciones y Contacto
 
